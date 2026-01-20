@@ -1,7 +1,6 @@
-# Andes Studio 
+## Andes Studio 
 Andes Studio is a Visual Studio Code extension that provides an integrated development environment for Andes software development. It allows developers to build, debug, and analyze applications directly in VS Code, without manually installing or managing individual toolchains.
 
-## Introduction
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
