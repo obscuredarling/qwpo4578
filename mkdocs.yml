@@ -1,5 +1,5 @@
 site_name: Andes Studio
-site_url: https://obscuredarling.github.io/Andes_Studio/
+site_url: https://obscuredarling.github.io/qwpo4578/
 
 theme: 
   name: material
@@ -43,7 +43,7 @@ markdown_extensions:
 
 nav: 
     - Home: index.md 
-    - Installation: Installation.md
+    - Installation: installation.md
     - Working with Andes Studio: working.md
     - Code Docs: 
       - Java: coding/java_code.md
