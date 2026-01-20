@@ -5,4 +5,3 @@
 ## Installing Andes Studio 
 Install VSCode Download the latest version of Visual Studio Code from the official website: https://code.visualstudio.com/download
 
-## Working with Andes Studio 
