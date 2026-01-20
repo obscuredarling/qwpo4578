@@ -43,6 +43,8 @@ markdown_extensions:
 
 nav: 
     - Home: index.md 
+    - Installation: Installation.md
+    - Working with Andes Studio: working.md
     - Code Docs: 
       - Java: coding/java_code.md
     - Demo Applications: demo.md
