@@ -1,5 +1,9 @@
 ## Andes Studio 
+<<<<<<< HEAD
 Andes Studio is an integrated development environment consisting of essential components and tools for software development with Andes V5 processors. It is provided as a Visual Studio (VS) Code extension, allowing developers to build, debug, and analyze their applications and manage toolchain, target and connection configurations directly in VS Code with ease. 
+=======
+Andes Studio is an integrated development environment consisting of essential components and tools for software development with Andes V5 processors. It is provided as an Visual Studio (VS) Code extension, allowing developers to build, debug, and analyze their applications and manage toolchain, target and connection configurations directly in VS Code with ease. 
+>>>>>>> 72edafd4a8f1cf7852b1686e0b4a2a1883122778
 
 ## Features 
 - **Target Users**
