@@ -1,5 +1,5 @@
 site_name: Andes Studio
-site_url: https://obscuredarling.github.io//qwpo4578/
+site_url: https://obscuredarling.github.io/qwpo4578/
 
 theme: 
   name: material
@@ -37,16 +37,20 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - admonition
+  - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
 
 nav: 
     - Home: index.md 
     - Installation: installation.md
     - Working with Andes Studio: working.md
-    - Code Docs: 
-      - Java: coding/java_code.md
     - Demo Applications: demo.md
     - References: references.md
+    - Code Docs: 
+      - Java: coding/java_code.md
+
 

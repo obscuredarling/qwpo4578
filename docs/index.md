@@ -1,16 +1,22 @@
 ## Andes Studio 
-Andes Studio is a Visual Studio Code extension that provides an integrated development environment for Andes software development. It allows developers to build, debug, and analyze applications directly in VS Code, without manually installing or managing individual toolchains.
+Andes Studio is an integrated development environment consisting of essential components and tools for software development with Andes V5 processors. It is provided as a Visual Studio (VS) Code extension, allowing developers to build, debug, and analyze their applications and manage toolchain, target and connection configurations directly in VS Code with ease. 
 
-## Commands
+## Features 
+- **Target Users**
+  Tailored for makers and educational users to perform software development on Andes V5 processor–based targets for non-commercial purposes.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- **SDK Integration**:
+  Includes the comprehensive AndeSoft SDK for developing applications on target systems embedded with Andes V5 processors.
 
-## Project layout
+- **Supported Targets**
+  Supports both single-core and multicore target systems.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- **Project and Build Configuration**:
+  Supports configuration and management of projects, including build, run, and debug workflows.
+
+- **Hardware Connectivity and Debugging**:
+    Provides flash programming tools and debuggers to enable connection to and interaction with physical Andes V5 target hardware.
+
+- **Demo Applications**:
+    Provides demo applications for different use cases.
+
