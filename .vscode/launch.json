@@ -1,0 +1,23 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "rvbuilder-debug",
+			"request": "launch",
+			"name": "Launch",
+			"connection": "AICE",
+			"program": "${workspaceFolder}/Debug/Andes_Studio.adx",
+			"loadMemoryMap": true,
+			"stopAtEntry": false,
+			"setupCommands": [
+				{
+					"text": "lo"
+				},
+				{
+					"text": "break main"
+				}
+			],
+			"showDevDebugOutput": true
+		}
+	]
+}

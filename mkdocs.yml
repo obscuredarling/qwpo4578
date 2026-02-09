@@ -1,9 +1,9 @@
-site_name: Andes Studio
+site_name: RVBuilder
 site_url: https://obscuredarling.github.io/qwpo4578/
 
 theme: 
   name: material
-  
+
   palette: 
     # Palette toggle for light mode
     - scheme: default
