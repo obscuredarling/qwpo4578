@@ -5,11 +5,11 @@ RVBuilder is an integrated development environment consisting of essential compo
 ## Features 
 - **Tailored for Makers and Educational Users**
   
-    Optimized for non-commercial software development on Andes RISC-V targets.
+    Optimized for non-commercial software development on target systems embedded with Andes RISC-V processors.
   
 - **Full SDK Integration**
   
-    Includes a comprehensive Software Development Kit (SDK) for developing applications on target systems embedded with Andes RISC-V processors.
+    Includes a comprehensive Software Development Kit (SDK) for developing applications on Andes RISC-V targets.
   
 - **Broad Target Support**
   

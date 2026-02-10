@@ -47,7 +47,8 @@ markdown_extensions:
 nav: 
     - Home: index.md 
     - Installation: installation.md
-    - Working with Andes Studio: working.md
+    - Working with RVBuilder: working.md
+    - RVBuilder Package Components: components.md
     - Demo Applications: demo.md
     - References: references.md
     - Code Docs: 

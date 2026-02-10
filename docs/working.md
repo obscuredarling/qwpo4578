@@ -2,9 +2,15 @@
 
 ## Configuring Project Settings
 
+
+
 ## Building a Project 
 
+
+
 ## Debugging a Project
+
+
 
 ## Flash Programming 
 

@@ -5,25 +5,25 @@
 ## RVBuilder Installation
 1. In Visual Studio Code, click ![Extension](./images/extension.png) on the **Activity Bar**. 
 2. Enter `RVBuilder` in the search box to find the RVBuilder extension. 
-3. Select the "RVBuilder" extension and view its README on the right. Click **Install** to start installation.
-4. Upon the completion of the installation, the **RVBuilder** icon  ![RVBuilder icon](./images/RVBuilder_icon.png) appears on the **Activity Bar**. In addition, RVBuilder **Home** view that offers quick access to project creation and demo applications also opens automatically. This verifies the  successful installation. 
+3. Select the "RVBuilder" extension and view its details on the right. Click **Install** to start installation.
+4. Upon the completion of the installation, the **RVBuilder** icon ![RVBuilder icon](./images/RVBuilder_icon.png) appears on the **Activity Bar**. In addition, the RVBuilder **Home** view that offers quick access to project creation and demo applications also opens automatically. This verifies the  successful installation. 
 ![RVBuilder install verification](./images/RVBuilder_home.png)
 
 > **Note**
 >
-> - If you reinstall or update the RVBuilder extension, restart Visual Studio Code or reload its window to apply the changes. To reload VS Code Window, press **F1**, type `Reload Window` in the Command Palette, select **Developer: Reload Window**, and press **Enter**.
+> - If you reinstall or update the RVBuilder extension, restart Visual Studio Code or reload its window to apply the changes. To reload VS Code window, press **F1**, type `Reload Window` in the Command Palette, select **Developer: Reload Window**, and press **Enter**.
 > - On Linux, a system password is required to grant RVBuilder permissions. After RVBuilder installation, follow the on-screen prompt to click **Run** and enter your system password.
 
 
 ## RVBuilder Configuration
 
-Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activity Bar** and select **Settings**. Under the User tab, select **Extensions > RVBuilder** in the navigation pane to view the available RVBuilder extension settings and modify them if necessary. 
+Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activity Bar** and select **Settings**. Under the **User** tab, select **Extensions > RVBuilder** in the navigation pane to view the available RVBuilder extension settings and modify them if necessary. 
 
 
 | Setting | Description |
 |---------|-------------|
+| Home Page| Controls whether the RVBuilder Home page is displayed when the VS Code starts. |
 | Package Root | Specifies the installation destination of the RVBuilder Software Development Kit (SDK).
 | Project Workspace | Specifies the path to the project workspace.|
-| Home Page| Controls whether the RVBuilder Home page is displayed when the VS Code starts. |
 
-![RVBuilder Settings](./images/RVBuilder_Settings.png)
+![RVBuilder Settings](./images/RVBuilder_settings.png)

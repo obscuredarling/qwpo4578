@@ -1,9 +1,0 @@
-
-        {
-            "terminal.integrated.defaultProfile.windows": "Command Prompt",
-            "terminal.integrated.env.windows": {
-                "PATH": "C:/Users/shirley/RVBuilder/RVBuilder_1.0.0/toolchains/nds32le-elf-newlib-v5/bin;C:/Users/shirley/RVBuilder/RVBuilder_1.0.0/msys64/mingw32/bin;C:/Users/shirley/RVBuilder/RVBuilder_1.0.0/msys64/usr/bin;C:/Users/shirley/RVBuilder/RVBuilder_1.0.0/msys64/ucrt64/bin;C:/Users/shirley/RVBuilder/RVBuilder_1.0.0/utils",
-                "ANDESIGHT_ROOT": "C:/Users/shirley/RVBuilder/RVBuilder_1.0.0"
-            },
-            "debug.allowBreakpointsEverywhere": true
-        }
