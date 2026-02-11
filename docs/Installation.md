@@ -6,7 +6,7 @@
 1. In Visual Studio Code, click ![Extension](./images/extension.png) on the **Activity Bar**. 
 2. Enter `RVBuilder` in the search box to find the RVBuilder extension. 
 3. Select the "RVBuilder" extension and view its details on the right. Click **Install** to start installation.
-4. Upon the completion of the installation, the **RVBuilder** icon ![RVBuilder icon](./images/RVBuilder_icon.png) appears on the **Activity Bar**. In addition, the RVBuilder **Home** view that offers quick access to project creation and demo applications also opens automatically. This verifies the  successful installation. 
+4. Upon the completion of the installation, the **RVBuilder** icon ![RVBuilder icon](./images/RVBuilder_icon.png) appears on the **Activity Bar**. In addition, the RVBuilder **Home** page that offers quick access to project creation and demo applications also opens automatically. This verifies the  successful installation. 
 ![RVBuilder install verification](./images/RVBuilder_home.png)
 
 > **Note**
@@ -23,7 +23,7 @@ Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activi
 | Setting | Description |
 |---------|-------------|
 | Home Page| Controls whether the RVBuilder Home page is displayed when the VS Code starts. |
-| Package Root | Specifies the installation destination of the RVBuilder Software Development Kit (SDK).
+| Package Root | Specifies the installation destination of the RVBuilder package components.
 | Project Workspace | Specifies the path to the project workspace.|
 
 ![RVBuilder Settings](./images/RVBuilder_settings.png)
