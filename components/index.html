@@ -800,7 +800,7 @@ For more information, see <a href="https://www.andestech.com/en/products-solutio
 <li><code>nds32</code>/<code>nds64</code> indicates the supported processor architecture. <code>nds32</code> for 32-bit Andes RISC-V processors and <code>nds64</code> for 64-bit Andes RISC-V processors.</li>
 <li><code>le</code> indicates that the supported target endianness is little-endian.</li>
 <li><code>elf</code> indicates the output binary format used by the compiler, assembler, and linker.  </li>
-<li><code>newlib</code> indicates that the toolchain provides the Newlib support and can be compiled with either GCC or LLVM comiler. </li>
+<li><code>newlib</code> indicates that the toolchain provides the Newlib support and can be compiled with either the GCC or LLVM compiler. </li>
 <li><code>v5</code> indicates that the toolchain targets the AndeStar™ Instruction Set Architecture (ISA) V5 implementation.</li>
 </ul>
 <p>The appropriate toolchain for a specific Andes target is predefined in the associated chip profile and does not require manual selection.  However, for RVBuilder projects that use a custom Makefile, you must update the target-related settings and toolchain paths in <code>tasks.json</code> after switching to a target (chip profile) with a different architecture (e.g. changing from 32-bit to 64-bit). The toolchain executable path is located at <code>${RVBUILDER_PACKAGE_ROOT}/toolchains/{TOOLCHAIN}/bin/</code>. </p>
