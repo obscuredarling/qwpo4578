@@ -15,37 +15,37 @@ Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activi
 
 ## RVBuilder-Specific Interface 
 
-- **RVBuilder Icon on the Activity Bar**
+### RVBuilder Icon on the Activity Bar
 
-    The RVBuilder icon serves as the entry point to the RVBuilder view.
+   The RVBuilder icon serves as the entry point to the RVBuilder view.
 
-- **RVBuilder View**
+### RVBuilder View
 
-    This view provides access to the RVBuilder Home page.
+   This view provides access to the RVBuilder Home page.
 
-- **RVBuilder Home Page**
+### RVBuilder Home Page
 
-    The RVBuilder Home page provides quick access to creating a new RVBuilder project or importing an RVBuilder demo project. It also includes links to reference documentation, technical support resources, and Andes Technology social media channels for developers who want to learn more.
+   The RVBuilder Home page provides quick access to creating a new RVBuilder project or importing an RVBuilder demo project. It also includes links to reference documentation, technical support resources, and Andes Technology social media channels for developers who want to learn more.
 
-    ![RVBuilder Entry Interface](./images/Interface_entry.png)
+   ![RVBuilder Entry Interface](./images/Interface_entry.png)
 
-- **RVBuilder Project Actions Items**
+### RVBuilder Project Action Items 
 
-    RVBuilder enables a set of project-related operations through an RVBuilder project pull-down menu or the **Explorer** view toolbar to streamline the development workflow. 
+   RVBuilder enables a set of project-related operations through an RVBuilder project pull-down menu or the **Explorer** view toolbar to streamline the development workflow. 
 
-    ![RVBuilder Porject Menu Items](./images/RVBuilder_project_pulldown_menu.png)
+   ![RVBuilder Porject Menu Items](./images/RVBuilder_project_pulldown_menu.png)
 
-    ![RVBuilder Toolbar Items](./images/RVBuilder_toolbar.png)
+   ![RVBuilder Toolbar Items](./images/RVBuilder_toolbar.png)
 
-    | Menu Item | Description |
-    |---------|-------------|
-    | RVBuilder: Build Project| Compiles the current project and generates the target binary/executable. |
-    | RVBuilder: Clean Project | Removes all build artifacts generated during previous builds. |
-    | RVBuilder: Delete Project | Deletes the RVBuilder project, including the configuration and source files. |
-    | RVBuilder: Rebuild Project | Performs a clean operation followed by a full rebuild. |
-    | RVBuilder: Debug | Launches a debug session for the RVBuilder project using the configured settings. |
-    | RVBuilder: Settings | Opens the RVBuilder project settings for configuration and modification. |
-    | RVBuilder: Flash Burner | Programs the generated project binary to the flash memory of a specified target.  |
+   | Menu Item | Description |
+   |---------|-------------|
+   | RVBuilder: Build Project| Compiles the current project and generates the target binary/executable. |
+   | RVBuilder: Clean Project | Removes all build artifacts generated during previous builds. |
+   | RVBuilder: Delete Project | Deletes the RVBuilder project, including the configuration and source files. |
+   | RVBuilder: Rebuild Project | Performs a clean operation followed by a full rebuild. |
+   | RVBuilder: Debug | Launches a debug session for the RVBuilder project using the configured settings. |
+   | RVBuilder: Settings | Opens the RVBuilder project settings for configuration and modification. |
+   | RVBuilder: Flash Burner | Programs the generated project binary to the flash memory of a specified target.  |
 
 
 

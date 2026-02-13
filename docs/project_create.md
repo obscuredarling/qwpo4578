@@ -1,4 +1,4 @@
-## Starting a New Project 
+## Starting a New RVBuilder Project 
 
 1. In Visual Studio Code, click ![RVBuilder icon](./images/RVBuilder_icon.png) to open the RVBuilder view and click **Home**. 
 2. On the RVBuilder **Home** page, click **New Project**. 
@@ -12,3 +12,15 @@
 ![RVBuilder project creation](./images/project_create.png)
 
 ## Adding RVBuilder settings to an Existing Project 
+
+For an existing non-RVBuilder project, RVBuilder settings can be added to enable RVBuilder features and streamline development on Andes RISC-V processors. Proceed as follows:
+
+1. Open the workspace that contains the target project.
+
+2. In the **Explorer** view, select the project folder. Next, click any [RVBuilder project action item] (./working.md#rvuilder-project-action-items) from either the project context menu or the Explorer view title bar actions.
+
+   For example, right-click the project folder and select **RVBuilder: Settings**.
+
+3. A notification dialog appears indicating that the selected project is not yet configured for RVBuilder development. Click **Add** to add the required RVBuilder settings to the project.
+
+4. The project is now configured as an RVBuilder project. RVBuilder features such as build, debug, and flash operations dedicated for Andes RISC-V targets are enabled, and the project is ready for development using the RVBuilder workflow.
