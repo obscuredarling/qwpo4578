@@ -14,16 +14,3 @@
 > - If you reinstall or update the RVBuilder extension, restart Visual Studio Code or reload its window to apply the changes. To reload VS Code window, press **F1**, type `Reload Window` in the Command Palette, select **Developer: Reload Window**, and press **Enter**.
 > - On Linux, a system password is required to grant RVBuilder permissions. After RVBuilder installation, follow the on-screen prompt to click **Run** and enter your system password.
 
-
-## RVBuilder Configuration
-
-Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activity Bar** and select **Settings**. Under the **User** tab, select **Extensions > RVBuilder** in the navigation pane to view the available RVBuilder extension settings and modify them if necessary. 
-
-
-| Setting | Description |
-|---------|-------------|
-| Home Page| Controls whether the RVBuilder Home page is displayed when the VS Code starts. |
-| Package Root | Specifies the installation destination of the RVBuilder package components.
-| Project Workspace | Specifies the path to the project workspace.|
-
-![RVBuilder Settings](./images/RVBuilder_settings.png)
