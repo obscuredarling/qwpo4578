@@ -1,6 +1,6 @@
 This section introduces the global settings of the RVBuilder extension in VS Code and the RVBuilder-specific interface designed to facilitate software development with Andes RISC-V processors.
 
-# RVBuilder Configuration
+## RVBuilder Configuration
 
 Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activity Bar** and select **Settings**. Under the **User** tab, select **Extensions > RVBuilder** in the navigation pane to view the available RVBuilder extension settings and modify them if necessary. 
 
@@ -13,8 +13,7 @@ Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activi
 
 ![RVBuilder Settings](./images/RVBuilder_settings.png)
 
-
-# RVBuilder-Specific Interface 
+## RVBuilder-Specific Interface 
 
 1. RVBuilder Icon on the Activity Bar
 
@@ -26,7 +25,7 @@ Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activi
 
 3. RVBuilder Home Page
 
-   The RVBuilder Home page provides quick access to creating a new RVBuilder project or importing an RVBuilder demo project. It also includes links to reference documentation, technical support resources, and Andes Technology social media channels for developers who want to learn more about Andes products and technologies.
+   The RVBuilder Home page provides quick access to creating a new RVBuilder project or importing an RVBuilder demo project. It also includes links to reference documentation, technical support resources, and Andes Technology social media channels for developers who want to learn more.
 
 ![RVBuilder Entry Interface](./images/Interface_entry.png)
 
