@@ -21,10 +21,10 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.instant.preview
-    - navigation.expand
+   # - navigation.expand
     - navigation.tracking
-    - toc.integrate 
     - navigation.top
+    - toc.integrate 
     - search.suggest
     - search.highlight
     - search.share

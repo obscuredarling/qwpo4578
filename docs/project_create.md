@@ -13,14 +13,19 @@
 
 ## Adding RVBuilder settings to an Existing Project 
 
-For an existing non-RVBuilder project, RVBuilder settings can be added to enable RVBuilder features and streamline development on Andes RISC-V processors. Proceed as follows:
+For an existing non-RVBuilder project, RVBuilder settings can be added to enable RVBuilder features and streamline development on targets embedded with Andes RISC-V processors. Proceed as follows:
 
-1. Open the workspace that contains the target project.
+1. Add an existing project folder to the current workspace. 
 
-2. In the **Explorer** view, select the project folder. Next, click any [RVBuilder project action item](./working.md#4-rvuilder-project-action-items) from either the project context menu or the Explorer view title bar actions.
+2. In the **Explorer** view, select the interested project folder. Next, click any [RVBuilder project action item](./working.md#4.-rvuilder-project-action-items) from either the project context menu or the **Explorer** view title menu.
 
-   For example, right-click the project folder and select **RVBuilder: Settings**.
+    For example, select an existing 'hello' project and click **RVBuilder: Settings** on the Explore view title menu.
+    ![Add RVBuilder Settings](./images/add_rvbuilder_setting.png)
 
 3. A notification dialog appears indicating that the selected project is not yet configured for RVBuilder development. Click **Add** to add the required RVBuilder settings to the project.
+    
+    **!!!TO-DO:UPDATE SCREENSHOT**
+    ![RVBuilder Settings Notification](./images/add_rvbuilder_setting_notify.png)
 
-4. The project is now configured as an RVBuilder project. RVBuilder features such as build, debug, and flash operations dedicated for Andes RISC-V targets are enabled, and the project is ready for development using the RVBuilder workflow.
+
+4. The project is now configured as an RVBuilder project. RVBuilder features such as build, debug, and flash operations dedicated for development with Andes RISC-V targets are enabled, and the project is ready for development using the RVBuilder workflow.

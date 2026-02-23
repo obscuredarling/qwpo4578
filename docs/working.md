@@ -47,5 +47,21 @@ Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activi
    | RVBuilder: Settings | Opens the RVBuilder project settings for configuration and modification. |
    | RVBuilder: Flash Burner | Programs the generated project binary to the flash memory of a specified target.  |
 
+## RVBuilder Settings in Workspace Configuration Files 
+A RVBuilder project, or an existing project applied with RVBuilder settings, includes preconfigured workspace settings required for development with Andes RISC-V targets. These settings are written to VS Code workspace configuration files in the `.vscode` folder under the project root directory. Among the files, pay attention to the following: 
+
+### `tasks.json`: Toolchain Executable Path
+For a RVBuilder project uses a custom Makefile (i.e., with an unchecked "Auto-Generate Makefile" option in its settings. See [**Auto Generate Makefile**](./project_config.md#auto-generate-makefile)), changing the project toolchain requires you to update the toolchain executable paths specified in this task configuration file. Otherwise, it may result in build errors. 
+
+Note that a toolchain change is typically triggered by a change in the selected chip profile. For more about toolchains in the RVBuilder package and their paths, see [**Toolchains**](./components.md#toolchains)
+
+![Toolchain Path](./images/toolchain_path_in_tasks_file.png)
 
 
+### `launch.json`: Memory Map Setting  
+Most target and program settings in this debug configuration file are configured automatically for RVBuilder projects. By default, 
+- the launch type is set to `rvbuilder-debug`.
+- the connection type and program specification are aligned with the project's target configuration and build settings. 
+- the `loadMemoryMap` setting is set to `true`, indicating the program executable is loaded according to the memory regions defined in the selected chip profile. If you want to load the program executable without applying the predefined memory mapping, set this setting to `false`.
+
+  ![Load Memory Map](./images/mem_map_in_launch.png)

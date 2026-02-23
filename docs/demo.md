@@ -1,5 +1,4 @@
-# Demo Applications 
 
-The included demo applications introduce how to build and configuration projects, and run it. 
+This section introduces how to build, configure and run the included demo applications.
 
-# Importing a Demo Project 
+## Importing a Demo Project 
