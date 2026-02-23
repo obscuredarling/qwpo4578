@@ -1,6 +1,8 @@
+This section outlines the system requirements and provides step-by-step instructions for installing and the RVBuilder extension in Visual Studio Code, including notes on updates and platform-specific considerations.
+
 ## Requirements 
 - **Operating System**: Windows or Linux
-- **Software**: Visual Studio Code (version 1.82 or later) installed from [Microsoft Visual Studio Code](https://code.visualstudio.com/download)
+- **Software**: Visual Studio Code (version 1.82 or later) from [Microsoft Visual Studio Code](https://code.visualstudio.com/download)
 
 ## RVBuilder Installation
 1. In Visual Studio Code, click ![Extension](./images/extension.png) on the **Activity Bar**. 

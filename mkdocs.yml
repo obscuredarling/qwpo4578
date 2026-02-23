@@ -21,6 +21,7 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.instant.preview
+    - navigation.expand
     - navigation.tracking
     - toc.integrate 
     - navigation.top
@@ -48,11 +49,11 @@ nav:
     - Home: index.md 
     - Installation: installation.md
     - Working with RVBuilder: working.md
-    - Creating a RVBuilder Project: project_create.md
-    - Configuring a RVBuilder Project: project_config.md
-    - Building a RVBuilder Project: project_build.md
-    - Flashing a RVBuilder Project: project_flash.md
-    - Debugging a RVBuilder Project: project_debug.md
+    - Creating an RVBuilder Project: project_create.md
+    - Configuring an RVBuilder Project: project_config.md
+    - Building an RVBuilder Project: project_build.md
+    - Flashing an RVBuilder Project: project_flash.md
+    - Debugging an RVBuilder Project: project_debug.md
     - Components and Tools: components.md
     - Demo Applications: demo.md
     - References: references.md

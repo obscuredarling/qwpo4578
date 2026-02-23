@@ -17,7 +17,7 @@ For an existing non-RVBuilder project, RVBuilder settings can be added to enable
 
 1. Open the workspace that contains the target project.
 
-2. In the **Explorer** view, select the project folder. Next, click any [RVBuilder project action item] (./working.md#rvuilder-project-action-items) from either the project context menu or the Explorer view title bar actions.
+2. In the **Explorer** view, select the project folder. Next, click any [RVBuilder project action item](./working.md#4-rvuilder-project-action-items) from either the project context menu or the Explorer view title bar actions.
 
    For example, right-click the project folder and select **RVBuilder: Settings**.
 

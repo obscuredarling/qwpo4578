@@ -15,21 +15,21 @@ Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activi
 
 ## RVBuilder-Specific Interface 
 
-### RVBuilder Icon on the Activity Bar
+### 1. RVBuilder Icon on the Activity Bar
 
    The RVBuilder icon serves as the entry point to the RVBuilder view.
 
-### RVBuilder View
+### 2. RVBuilder View
 
    This view provides access to the RVBuilder Home page.
 
-### RVBuilder Home Page
+### 3. RVBuilder Home Page
 
    The RVBuilder Home page provides quick access to creating a new RVBuilder project or importing an RVBuilder demo project. It also includes links to reference documentation, technical support resources, and Andes Technology social media channels for developers who want to learn more.
 
    ![RVBuilder Entry Interface](./images/Interface_entry.png)
 
-### RVBuilder Project Action Items 
+### 4. RVBuilder Project Action Items 
 
    RVBuilder enables a set of project-related operations through an RVBuilder project pull-down menu or the **Explorer** view toolbar to streamline the development workflow. 
 
