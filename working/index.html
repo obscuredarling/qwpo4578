@@ -376,10 +376,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rvbuilder-icon-on-the-activity-bar" class="md-nav__link">
+  <a href="#1-rvbuilder-icon-on-the-activity-bar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RVBuilder Icon on the Activity Bar
+        1. RVBuilder Icon on the Activity Bar
       
     </span>
   </a>
@@ -387,10 +387,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rvbuilder-view" class="md-nav__link">
+  <a href="#2-rvbuilder-view" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RVBuilder View
+        2. RVBuilder View
       
     </span>
   </a>
@@ -398,10 +398,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rvbuilder-home-page" class="md-nav__link">
+  <a href="#3-rvbuilder-home-page" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RVBuilder Home Page
+        3. RVBuilder Home Page
       
     </span>
   </a>
@@ -409,10 +409,49 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#rvbuilder-project-action-items" class="md-nav__link">
+  <a href="#4-rvbuilder-project-action-items" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RVBuilder Project Action Items
+        4. RVBuilder Project Action Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rvbuilder-settings-in-workspace-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RVBuilder Settings in Workspace Configuration Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RVBuilder Settings in Workspace Configuration Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tasksjson-toolchain-executable-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tasks.json: Toolchain Executable Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launchjson-memory-map-setting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        launch.json: Memory Map Setting
       
     </span>
   </a>
@@ -446,7 +485,7 @@
   <span class="md-ellipsis">
     
   
-    Creating a RVBuilder Project
+    Creating an RVBuilder Project
   
 
     
@@ -473,7 +512,7 @@
   <span class="md-ellipsis">
     
   
-    Configuring a RVBuilder Project
+    Configuring an RVBuilder Project
   
 
     
@@ -500,7 +539,7 @@
   <span class="md-ellipsis">
     
   
-    Building a RVBuilder Project
+    Building an RVBuilder Project
   
 
     
@@ -527,7 +566,7 @@
   <span class="md-ellipsis">
     
   
-    Flashing a RVBuilder Project
+    Flashing an RVBuilder Project
   
 
     
@@ -554,7 +593,7 @@
   <span class="md-ellipsis">
     
   
-    Debugging a RVBuilder Project
+    Debugging an RVBuilder Project
   
 
     
@@ -776,17 +815,17 @@
 </table>
 <p><img alt="RVBuilder Settings" src="../images/RVBuilder_settings.png" /></p>
 <h2 id="rvbuilder-specific-interface">RVBuilder-Specific Interface</h2>
-<h3 id="rvbuilder-icon-on-the-activity-bar">RVBuilder Icon on the Activity Bar</h3>
+<h3 id="1-rvbuilder-icon-on-the-activity-bar">1. RVBuilder Icon on the Activity Bar</h3>
 <p>The RVBuilder icon serves as the entry point to the RVBuilder view.</p>
-<h3 id="rvbuilder-view">RVBuilder View</h3>
+<h3 id="2-rvbuilder-view">2. RVBuilder View</h3>
 <p>This view provides access to the RVBuilder Home page.</p>
-<h3 id="rvbuilder-home-page">RVBuilder Home Page</h3>
+<h3 id="3-rvbuilder-home-page">3. RVBuilder Home Page</h3>
 <p>The RVBuilder Home page provides quick access to creating a new RVBuilder project or importing an RVBuilder demo project. It also includes links to reference documentation, technical support resources, and Andes Technology social media channels for developers who want to learn more.</p>
 <p><img alt="RVBuilder Entry Interface" src="../images/Interface_entry.png" /></p>
-<h3 id="rvbuilder-project-action-items">RVBuilder Project Action Items</h3>
-<p>RVBuilder enables a set of project-related operations through an RVBuilder project pull-down menu or the <strong>Explorer</strong> view toolbar to streamline the development workflow. </p>
+<h3 id="4-rvbuilder-project-action-items">4. RVBuilder Project Action Items</h3>
+<p>RVBuilder enables a set of project-related operations through an RVBuilder project pull-down menu or the <strong>Explorer</strong> view title menu to streamline the development workflow. </p>
 <p><img alt="RVBuilder Porject Menu Items" src="../images/RVBuilder_project_pulldown_menu.png" /></p>
-<p><img alt="RVBuilder Toolbar Items" src="../images/RVBuilder_toolbar.png" /></p>
+<p><img alt="RVBuilder Title Menu" src="../images/RVBuilder_toolbar.png" /></p>
 <table>
 <thead>
 <tr>
@@ -825,6 +864,20 @@
 </tr>
 </tbody>
 </table>
+<h2 id="rvbuilder-settings-in-workspace-configuration-files">RVBuilder Settings in Workspace Configuration Files</h2>
+<p>An RVBuilder project, or an existing project applied with RVBuilder settings, includes preconfigured workspace settings required for development with Andes RISC-V targets. These settings are written to VS Code workspace configuration files in the <code>.vscode</code> folder under the project root directory. Among the files, pay attention to the following: </p>
+<h3 id="tasksjson-toolchain-executable-path"><code>tasks.json</code>: Toolchain Executable Path</h3>
+<p>For an RVBuilder project uses a custom Makefile (i.e., with an unchecked "Auto-Generate Makefile" option in its settings. See <a href="../project_config/#auto-generate-makefile"><strong>Auto Generate Makefile</strong></a>), changing the project toolchain requires you to update the toolchain executable paths specified in this task configuration file. Otherwise, it may result in build errors. </p>
+<p>Note that a toolchain change is typically triggered by a change in the selected chip profile. For more about toolchains in the RVBuilder package and their paths, see <a href="../components/#toolchains"><strong>Toolchains</strong></a>.</p>
+<p><img alt="Toolchain Path" src="../images/toolchain_path_in_tasks_file.png" /></p>
+<h3 id="launchjson-memory-map-setting"><code>launch.json</code>: Memory Map Setting</h3>
+<p>Most target and program settings in this debug configuration file are configured automatically for RVBuilder projects. By default, </p>
+<ul>
+<li>the launch type is set to <code>rvbuilder-debug</code>.</li>
+<li>the connection type and program specification are aligned with the project's target configuration and build settings. </li>
+<li>the <code>loadMemoryMap</code> setting is set to <code>true</code>, indicating the program executable is loaded according to the memory regions defined in the selected chip profile. If you want to load the program executable without applying the predefined memory mapping, set this setting to <code>false</code>.
+<img alt="Load Memory Map" src="../images/mem_map_in_launch.png" /></li>
+</ul>
 
 
 
@@ -882,7 +935,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

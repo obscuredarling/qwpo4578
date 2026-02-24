@@ -25,7 +25,7 @@
     
     
       
-        <title>Building a RVBuilder Project - RVBuilder</title>
+        <title>Building an RVBuilder Project - RVBuilder</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#build-methods" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Building a RVBuilder Project
+              Building an RVBuilder Project
             
           </span>
         </div>
@@ -326,7 +331,7 @@
   <span class="md-ellipsis">
     
   
-    Creating a RVBuilder Project
+    Creating an RVBuilder Project
   
 
     
@@ -353,7 +358,7 @@
   <span class="md-ellipsis">
     
   
-    Configuring a RVBuilder Project
+    Configuring an RVBuilder Project
   
 
     
@@ -380,6 +385,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building an RVBuilder Project
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -387,7 +410,7 @@
   <span class="md-ellipsis">
     
   
-    Building a RVBuilder Project
+    Building an RVBuilder Project
   
 
     
@@ -396,6 +419,56 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Artifacts
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -415,7 +488,7 @@
   <span class="md-ellipsis">
     
   
-    Flashing a RVBuilder Project
+    Flashing an RVBuilder Project
   
 
     
@@ -442,7 +515,7 @@
   <span class="md-ellipsis">
     
   
-    Debugging a RVBuilder Project
+    Debugging an RVBuilder Project
   
 
     
@@ -635,9 +708,41 @@
 
 
 
-  <h1>Building a RVBuilder Project</h1>
+  <h1>Building an RVBuilder Project</h1>
 
-
+<p>This section describes how to build an RVBuilder project in VS Code. It covers the available build methods, where the build output is displayed, and where the generated artifacts are located for single-core and multi-core Andes RISC-V targets.</p>
+<h2 id="build-methods">Build Methods</h2>
+<p>With the project selected in the <strong>Explorer</strong> view, use either of the following ways to initiate the build process of an RVBuilder project.</p>
+<ul>
+<li>
+<p>On the project's <strong>Settings</strong> page, click "Build" in the upper-right corner. 
+    <img alt="project build 1" src="../images/build_from_project_setting.png" /></p>
+</li>
+<li>
+<p>On the project's drop-down menu, click "RVBuilder: Build Project".
+    <img alt="project build 2" src="../images/build_from_project_drop_down.png" /></p>
+</li>
+<li>
+<p>On the <strong>Explorer</strong> view title menu, click <img alt="Build icon" src="../images/build_icon.png" /> (RVBuilder: Build Project).<br />
+<img alt="project build 3" src="../images/build_from_title_menu.png" /></p>
+</li>
+<li>
+<p>In the Command Palette (opened using the keyboard F1 or Ctrl+Shift+P), use the  "RVBuilder: Build Project" command.<br />
+<img alt="project build 4" src="../images/build_from_command_palette.png" /></p>
+</li>
+</ul>
+<hr />
+<p><strong>Note</strong></p>
+<p>If you use a self-defined <code>tasks.json</code> for an RVBuilder project, start the build process using the “Tasks: Run Task” command from the Command Palette. This invokes VS Code’s native task runner to execute the build task defined in <code>tasks.json</code>.</p>
+<hr />
+<h2 id="build-output">Build Output</h2>
+<p>The build process and result are displayed in the <strong>Terminal</strong> view. </p>
+<p><img alt="build output" src="../images/build_output_from_terminal.png" /></p>
+<h2 id="build-artifacts">Build Artifacts</h2>
+<p>For RVbuilder projects targeting a single-core Andes RISC-V target, the program executable (<code>.adx</code>) and object file are generated in <code>${PROJECT}/[Debug|Release]</code> and the binutil output (e.g., <code>.bin</code>) in <code>${PROJECT}/[Debug|Release]/output</code>. </p>
+<p>For projects targeting a multi-core Andes RISC-V target, the program executable (<code>.adx</code>) and object file are generated in <code>${PROJECT}/${CORE}/[Debug|Release]-${CORE}</code> and the binutil output (e.g., <code>.bin</code>) is in <code>${PROJECT}/${CORE}/[Debug|Release]-${CORE}/output</code>. </p>
+<p>The following shows build artifact locations for a Test project to be run on a single-core Andes RISC-V target. 
+ <img alt="build artifact location" src="../images/build_artifact_location.png" /></p>
 
 
 
@@ -695,7 +800,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>

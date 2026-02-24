@@ -25,7 +25,7 @@
     
     
       
-        <title>Configuring a RVBuilder Project - RVBuilder</title>
+        <title>Configuring an RVBuilder Project - RVBuilder</title>
       
     
     
@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#target-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuring a RVBuilder Project
+              Configuring an RVBuilder Project
             
           </span>
         </div>
@@ -326,7 +331,7 @@
   <span class="md-ellipsis">
     
   
-    Creating a RVBuilder Project
+    Creating an RVBuilder Project
   
 
     
@@ -353,6 +358,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring an RVBuilder Project
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -360,7 +383,7 @@
   <span class="md-ellipsis">
     
   
-    Configuring a RVBuilder Project
+    Configuring an RVBuilder Project
   
 
     
@@ -369,6 +392,134 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#target-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Target Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chip-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chip Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolchain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-generate-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-Generate Makefile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Build Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linker-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linker Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldsag-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LdSaG Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -388,7 +539,7 @@
   <span class="md-ellipsis">
     
   
-    Building a RVBuilder Project
+    Building an RVBuilder Project
   
 
     
@@ -415,7 +566,7 @@
   <span class="md-ellipsis">
     
   
-    Flashing a RVBuilder Project
+    Flashing an RVBuilder Project
   
 
     
@@ -442,7 +593,7 @@
   <span class="md-ellipsis">
     
   
-    Debugging a RVBuilder Project
+    Debugging an RVBuilder Project
   
 
     
@@ -635,9 +786,17 @@
 
 
 
-  <h1>Configuring a RVBuilder Project</h1>
+  <h1>Configuring an RVBuilder Project</h1>
 
-
+<h2 id="target-configuration">Target Configuration</h2>
+<h3 id="active-configuration">Active Configuration</h3>
+<h3 id="chip-profile">Chip Profile</h3>
+<h3 id="connection">Connection</h3>
+<h3 id="toolchain">Toolchain</h3>
+<h3 id="auto-generate-makefile">Auto-Generate Makefile</h3>
+<h2 id="build-settings">Build Settings</h2>
+<h3 id="linker-settings">Linker Settings</h3>
+<h3 id="ldsag-settings">LdSaG Settings</h3>
 
 
 
@@ -695,7 +854,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
