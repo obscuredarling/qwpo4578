@@ -40,7 +40,7 @@ The toolchain naming convention denotes the following:
 - `newlib` indicates that the toolchain provides the Newlib support and can be compiled with either the GCC or LLVM compiler. 
 - `v5` indicates that the toolchain targets the AndeStar™ Instruction Set Architecture (ISA) V5 implementation.
 
-The appropriate toolchain for a specific Andes target is predefined in the associated chip profile and does not require manual selection.  However, for RVBuilder projects that use a custom Makefile, you must update the target-related settings and toolchain paths in `tasks.json` after switching to a target (chip profile) with a different architecture (e.g. changing from 32-bit to 64-bit). The toolchain executable path is located at `${RVBUILDER_PACKAGE_ROOT}/toolchains/{TOOLCHAIN}/bin/`. 
+The appropriate toolchain for a specific Andes target is predefined in the associated chip profile and does not require manual selection. However, for RVBuilder projects that use a custom Makefile, you must update the target-related settings and toolchain paths in `tasks.json` after switching to a target (chip profile) with a different architecture (e.g. changing from 32-bit to 64-bit). The toolchain executable path is located at `${RVBUILDER_PACKAGE_ROOT}/toolchains/{TOOLCHAIN}/bin/`. 
 
 
 ## Connection Configurations 
