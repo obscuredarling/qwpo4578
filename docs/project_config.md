@@ -17,6 +17,3 @@
 
 ### LdSaG Settings 
 
-## General Settings 
-
-### Source Filter

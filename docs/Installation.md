@@ -12,8 +12,10 @@ This section outlines the system requirements and provides step-by-step instruct
 4. Upon the completion of the installation, the **RVBuilder** icon ![RVBuilder icon](./images/RVBuilder_icon.png) appears on the **Activity Bar**. In addition, the RVBuilder **Home** page that offers quick access to project creation and demo applications also opens automatically. This verifies the  successful installation. 
 ![RVBuilder install verification](./images/RVBuilder_home.png)
 
-> **Note**
->
+>---
+ **Note**
+
 > - If you reinstall or update the RVBuilder extension, restart Visual Studio Code or reload its window to apply the changes. To reload VS Code window, press **F1**, type `Reload Window` in the Command Palette, select **Developer: Reload Window**, and press **Enter**.
 > - On Linux, a system password is required to grant RVBuilder permissions. After RVBuilder installation, follow the on-screen prompt to click **Run** and enter your system password.
 
+---
