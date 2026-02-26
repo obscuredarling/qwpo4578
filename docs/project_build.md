@@ -12,7 +12,7 @@ With the project selected in the **Explorer** view, use either of the following 
  - On the **Explorer** view title menu, click ![Build icon](./images/build_icon.png) (RVBuilder: Build Project).  
     ![project build 3](./images/build_from_title_menu.png)
 
- - In the Command Palette (opened using the keyboard F1 or Ctrl+Shift+P), use the  "RVBuilder: Build Project" command.  
+ - In the Command Palette (opened using the keyboard F1 or Ctrl+Shift+P), use the "RVBuilder: Build Project" command.  
     ![project build 4](./images/build_from_command_palette.png)
 
  ---

@@ -1,11 +1,11 @@
-# Components and Tools 
+## Components and Tools 
 RVBuilder includes a set of components and tools that support the complete software development workflow for Andes RISC-V–based targets. These components provide predefined configurations and utilities required throughout development, including target configuration files (Chip Profiles), toolchains, connection configurations, the Andes In-Circuit Emulator driver (ICEman), the Andes QEMU emulator, the Linker Script Generator (LdSaG), and flash programming utilities. 
 
 The integration of these components within VS Code enables you to manage build, run and debug workflows through a unified interface, eliminating the need for manual installation and configuration of individual components for the desired Andes RISC-V target.
 
 The following provide brief introduction to the key components and tools in the RVBuilder package.
 
-## Chip Profiles 
+### Chip Profiles 
 Chip profiles describe the specifications and software configuration of specific target platforms.
 RVBuilder provides a set of predefined chip profiles for Andes targets. Each chip profile contains the required software settings for the corresponding target, such as 
 - the preferred toolchain
@@ -29,7 +29,7 @@ For more information, see [AndesCore™ Processors](https://www.andestech.com/en
 
 Examples of chip profiles within the RVBuilder Package: ADP-AE250-N25F, ADP-AE350-NX45-RVB, ADP-AE350-AX46MPV-SMP and more. 
 
-## Toolchains
+### Toolchains
 The RVBuilder package provides two toolchains, `nds32le-elf-newlib-v5` and `nds64le-elf-newlib-v5`, for software development on Andes RISC-V targets.
 
 The toolchain naming convention denotes the following:
@@ -43,19 +43,17 @@ The toolchain naming convention denotes the following:
 The appropriate toolchain for a specific Andes target is predefined in the associated chip profile and does not require manual selection. However, for RVBuilder projects that use a custom Makefile, you must update the target-related settings and toolchain paths in `tasks.json` after switching to a target (chip profile) with a different architecture (e.g. changing from 32-bit to 64-bit). The toolchain executable path is located at `${RVBUILDER_PACKAGE_ROOT}/toolchains/${TOOLCHAIN}/bin/`. 
 
 
-## Connection Configurations 
+### Connection Configurations 
 
 AICE, Andes QEMU, maverick, GDB server 
 
-###  ICEman
+#### ICEman
 
-###   
+####    
 
-## Linker Script Generator (LdSaG)
+### Linker Script Generator (LdSaG)
 
-
-
-## Flash Burners 
+### Flash Burners 
 
 
 
