@@ -48,12 +48,12 @@ markdown_extensions:
 nav: 
     - Home: index.md 
     - Installation: installation.md
-    - Working with RVBuilder: working.md
-    - Creating an RVBuilder Project: project_create.md
-    - Configuring an RVBuilder Project: project_config.md
-    - Building an RVBuilder Project: project_build.md
-    - Flashing an RVBuilder Project: project_flash.md
-    - Debugging an RVBuilder Project: project_debug.md
+    - Using RVBuilder in VS Code: working.md
+    - Create an RVBuilder Project: project_create.md
+    - Configure an RVBuilder Project: project_config.md
+    - Build an RVBuilder Application: project_build.md
+    - Flash an RVBuilder Application: project_flash.md
+    - Debug an RVBuilder Application: project_debug.md
     - Components and Tools: components.md
     - Demo Applications: demo.md
     - References: references.md

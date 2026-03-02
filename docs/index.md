@@ -1,5 +1,5 @@
 ## RVBuilder 
-RVBuilder is an integrated development environment consisting of essential components and tools for software development with Andes RISC-V processors. Delivered as Visual Studio (VS) Code extension, it enables developers to quickly set up a development environment for Andes RISC-V targets without installing individual Andes components. It also allows them to build, debug, and analyze applications, as well as manage project settings, directly within VS Code. 
+RVBuilder is an integrated development environment consisting of essential components and tools for software development with Andes RISC-V processors. Delivered as Visual Studio (VS) Code extension, it enables you to quickly set up a development environment for Andes RISC-V targets without installing individual Andes components. You can build, debug, and analyze applications, as well as manage project settings, directly within VS Code. 
 
 ## Features 
 - **Tailored for Makers and Educational Users**

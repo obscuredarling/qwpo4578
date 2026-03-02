@@ -17,7 +17,7 @@ Andes chip profiles follow the naming format:
 > **`ADP-<PLATFORM>-<CORE>-<SUFFIX>`**
 
 - `ADP` stands for Andes Development Platform. It is used as the prefix for Andes target configurations.
-- **`<PLATFORM>`** refers to an AndeShape™ platform. Supported platform IPs or development platforms include: AE250, AE350, and Corvette-F1. For more information, see [AndeShape™ Platforms](https://www.andestech.com/en/products-solutions/andeshape-platforms/).
+- **`<PLATFORM>`** refers to an AndeShape™ platform. Supported platform IPs or development platforms include: AE350 and Corvette-F1. For more information, see [AndeShape™ Platforms](https://www.andestech.com/en/products-solutions/andeshape-platforms/).
 - **`<CORE>`** refers to a 32-bit or 64-bit AndesCore™ processor core. The RVBuilder package supports a variety of AndesCore processor series designed for different applications
 For more information, see [AndesCore™ Processors](https://www.andestech.com/en/products-solutions/andescore-processors/).
 - **`<SUFFIX>`** denotes additional features or configurations of the target. Supported suffixes include: 
