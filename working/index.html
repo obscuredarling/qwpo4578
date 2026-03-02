@@ -25,7 +25,7 @@
     
     
       
-        <title>Working with RVBuilder - RVBuilder</title>
+        <title>Using RVBuilder in VS Code - RVBuilder</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Working with RVBuilder
+              Using RVBuilder in VS Code
             
           </span>
         </div>
@@ -311,7 +311,7 @@
   <span class="md-ellipsis">
     
   
-    Working with RVBuilder
+    Using RVBuilder in VS Code
   
 
     
@@ -329,7 +329,7 @@
   <span class="md-ellipsis">
     
   
-    Working with RVBuilder
+    Using RVBuilder in VS Code
   
 
     
@@ -437,10 +437,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tasksjson-toolchain-executable-path" class="md-nav__link">
+  <a href="#tasksjson" class="md-nav__link">
     <span class="md-ellipsis">
       
-        tasks.json: Toolchain Executable Path
+        tasks.json
       
     </span>
   </a>
@@ -448,10 +448,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#launchjson-memory-map-setting" class="md-nav__link">
+  <a href="#launchjson" class="md-nav__link">
     <span class="md-ellipsis">
       
-        launch.json: Memory Map Setting
+        launch.json
       
     </span>
   </a>
@@ -485,7 +485,7 @@
   <span class="md-ellipsis">
     
   
-    Creating an RVBuilder Project
+    Create an RVBuilder Project
   
 
     
@@ -512,7 +512,7 @@
   <span class="md-ellipsis">
     
   
-    Configuring an RVBuilder Project
+    Configure an RVBuilder Project
   
 
     
@@ -539,7 +539,7 @@
   <span class="md-ellipsis">
     
   
-    Building an RVBuilder Project
+    Build an RVBuilder Application
   
 
     
@@ -566,7 +566,7 @@
   <span class="md-ellipsis">
     
   
-    Flashing an RVBuilder Project
+    Flash an RVBuilder Application
   
 
     
@@ -593,7 +593,7 @@
   <span class="md-ellipsis">
     
   
-    Debugging an RVBuilder Project
+    Debug an RVBuilder Application
   
 
     
@@ -786,7 +786,7 @@
 
 
 
-  <h1>Working with RVBuilder</h1>
+  <h1>Using RVBuilder in VS Code</h1>
 
 <p>This section introduces the configuration of the RVBuilder extension in VS Code and the RVBuilder-specific interface and settings designed to facilitate software development with Andes RISC-V processors.</p>
 <h2 id="extension-configuration">Extension Configuration</h2>
@@ -816,14 +816,14 @@
 <p><img alt="RVBuilder Settings" src="../images/RVBuilder_settings.png" /></p>
 <h2 id="rvbuilder-specific-interface">RVBuilder-Specific Interface</h2>
 <h3 id="1-rvbuilder-icon-on-the-activity-bar">1. RVBuilder Icon on the Activity Bar</h3>
-<p>The RVBuilder icon serves as the entry point to the RVBuilder view.</p>
+<p>The RVBuilder icon serves as the entry point to the <strong>RVBuilder</strong> view.</p>
 <h3 id="2-rvbuilder-view">2. RVBuilder View</h3>
-<p>This view provides access to the RVBuilder Home page.</p>
+<p>This view provides access to the RVBuilder <strong>Home</strong> page.</p>
 <h3 id="3-rvbuilder-home-page">3. RVBuilder Home Page</h3>
-<p>The RVBuilder Home page provides quick access to creating a new RVBuilder project or importing an RVBuilder demo project. It also includes links to reference documentation, technical support resources, and Andes Technology social media channels for developers who want to learn more.</p>
+<p>The RVBuilder <strong>Home</strong> page provides quick access to creating a new RVBuilder project or importing an RVBuilder demo project. It also includes links to reference documentation, technical support resources, and Andes Technology social media channels for developers who want to learn more.</p>
 <p><img alt="RVBuilder Entry Interface" src="../images/Interface_entry.png" /></p>
 <h3 id="4-rvbuilder-project-action-items">4. RVBuilder Project Action Items</h3>
-<p>RVBuilder enables a set of project-related operations through an RVBuilder project pull-down menu or the <strong>Explorer</strong> view title menu to streamline the development workflow. </p>
+<p>RVBuilder enables a set of project operations through an RVBuilder project pull-down menu or the <strong>Explorer</strong> view title menu to streamline the development workflow. </p>
 <p><img alt="RVBuilder Porject Menu Items" src="../images/RVBuilder_project_pulldown_menu.png" /></p>
 <p><img alt="RVBuilder Title Menu" src="../images/RVBuilder_toolbar.png" /></p>
 <table>
@@ -844,7 +844,7 @@
 </tr>
 <tr>
 <td>RVBuilder: Delete Project</td>
-<td>Deletes the RVBuilder project, including the configuration and source files.</td>
+<td>Deletes the selected RVBuilder project, including the configuration and source files.</td>
 </tr>
 <tr>
 <td>RVBuilder: Rebuild Project</td>
@@ -852,7 +852,7 @@
 </tr>
 <tr>
 <td>RVBuilder: Debug</td>
-<td>Launches a debug session for the RVBuilder project using the configured settings.</td>
+<td>Starts debugging the currently active file or the selected project.</td>
 </tr>
 <tr>
 <td>RVBuilder: Settings</td>
@@ -865,19 +865,26 @@
 </tbody>
 </table>
 <h2 id="rvbuilder-settings-in-workspace-configuration-files">RVBuilder Settings in Workspace Configuration Files</h2>
-<p>An RVBuilder project, or an existing project applied with RVBuilder settings, includes preconfigured workspace settings required for development with Andes RISC-V targets. These settings are written to VS Code workspace configuration files in the <code>.vscode</code> folder under the project root directory. Among the files, pay attention to the following: </p>
-<h3 id="tasksjson-toolchain-executable-path"><code>tasks.json</code>: Toolchain Executable Path</h3>
-<p>For an RVBuilder project uses a custom Makefile (i.e., with an unchecked "Auto-Generate Makefile" option in its settings. See <a href="../project_config/#auto-generate-makefile"><strong>Auto Generate Makefile</strong></a>), changing the project toolchain requires you to update the toolchain executable paths specified in this task configuration file. Otherwise, it may result in build errors. </p>
-<p>Note that a toolchain change is typically triggered by a change in the selected chip profile. For more about toolchains in the RVBuilder package and their paths, see <a href="../components/#toolchains"><strong>Toolchains</strong></a>.</p>
+<p>Projects configured with RVBuilder include specialized workspace settings required for development with Andes RISC-V targets. These settings are written to VS Code workspace configuration files in the <code>.vscode</code> folder under the project root directory. RVBuilder either automatically generates the workspace configuration files or patches existing ones to ensure the environment is optimized for Andes RISC-V development. </p>
+<p>Among the RVBuilder workspace settings, pay attention to the following: </p>
+<h3 id="tasksjson"><code>tasks.json</code></h3>
+<p>For projects that use the Makefile automatically generated by RVBuilder (see <a href="../project_config/#auto-generate-makefile"><strong>Auto Generate Makefile</strong></a>), the build task settings in the task configuration file are synchronized with the target configuration and build options specified in the project settings.</p>
+<p>However, if the project uses a custom Makefile (that is, the <a href="../project_config/#auto-generate-makefile"><strong>Auto Generate Makefile</strong></a> is unchecked), changing the project toolchain requires you to manually update the toolchain executable paths in the file. Otherwise, build errors may occur. </p>
+<p>Note that a toolchain change is typically caused by a change in the selected chip profile. For more about toolchains in the RVBuilder package and their paths, see <a href="../components/#toolchains"><strong>Toolchains</strong></a>.</p>
 <p><img alt="Toolchain Path" src="../images/toolchain_path_in_tasks_file.png" /></p>
-<h3 id="launchjson-memory-map-setting"><code>launch.json</code>: Memory Map Setting</h3>
-<p>Most target and program settings in this debug configuration file are configured automatically for RVBuilder projects. By default, </p>
+<h3 id="launchjson"><code>launch.json</code></h3>
+<p>Most workspace settings in this debug configuration file are generated automatically for Andes RISC-V development. By default, </p>
 <ul>
-<li>the launch type is set to <code>rvbuilder-debug</code>.</li>
-<li>the connection type and program specification are aligned with the project's target configuration and build settings. </li>
-<li>the <code>loadMemoryMap</code> setting is set to <code>true</code>, indicating the program executable is loaded according to the memory regions defined in the selected chip profile. If you want to load the program executable without applying the predefined memory mapping, set this setting to <code>false</code>.
-<img alt="Load Memory Map" src="../images/mem_map_in_launch.png" /></li>
+<li>the launch <code>type</code> is set to <code>rvbuilder-debug</code>.</li>
+<li>the <code>connection</code> type and <code>program</code> path are synchronized with the target configuration and build settings defined in the project settings. </li>
+<li>
+<p>the <code>loadMemoryMap</code> option is set to <code>true</code>, which loads the program executable according to the memory regions defined in the selected chip profile. To load the program executable without applying the predefined memory mapping, set this option to <code>false</code>.</p>
+<p><img alt="Load Memory Map" src="../images/mem_map_in_launch.png" /></p>
+</li>
 </ul>
+<p>You can further customize debugger behavior using the following options:
+- <code>stopAtEntry</code> controls whether to halt execution at the program entry point when the debug session starts.
+- <code>setupCommands</code> specifies debugger commands that are executed automatically at the start of the debug session.</p>
 
 
 
