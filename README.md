@@ -8,8 +8,8 @@ This repository contains the source content for the [RVBuilder documentation sit
 1. Go to the **[RVBuilder latest release page](https://github.com/andestech/RVBuilder/releases/latest)**. 
 2. Download the  `rvbuilder-1.0.0.vsix` file in the **Assets** section. 
 
-## Install the RVBuilder in VS Code 
+## Install the RVBuilder Extension in VS Code 
 1. Open VS Code and click ![Extension](./docs/images/extension.png) in the **Activity Bar**.
-2. Click the More Actions icon ... in the top-right corner.
+2. Click the **More Actions** icon ![dots](./docs/images/dots.png) in the top-right corner.
 3. Select "Install from VSIX..." and select the downloaded `rvbuilder-1.0.0.vsix`.
 
