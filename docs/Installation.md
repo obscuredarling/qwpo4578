@@ -13,8 +13,6 @@ This section outlines the system requirements and provides step-by-step instruct
 
     ![RVBuilder install verification](./images/RVBuilder_install_verify.png)
 
-**TO-DO: Update RVbuilder_Install Verify screenshot -the installed RVBuilder extension should include short description.** 
-
 ---
  **Note**
 

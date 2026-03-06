@@ -27,12 +27,12 @@ For more information, see [AndesCore™ Processors](https://www.andestech.com/en
     - `1C` — Single-core configuration of a multi-core target
     - `SMP` — Symmetric multiprocessing configuration for multi-core targets
 
-Examples of chip profiles within the RVBuilder Package: ADP-AE250-N25F, ADP-AE350-NX45-RVB, ADP-AE350-AX46MPV-SMP and more. 
+Examples of chip profiles within the RVBuilder Package include ADP-AE250-N25F, ADP-AE350-NX45-RVB, ADP-AE350-AX46MPV-SMP and more. 
 
 ### Toolchains
-The RVBuilder package provides two toolchains, `nds32le-elf-newlib-v5` and `nds64le-elf-newlib-v5`, for software development on Andes RISC-V targets.
+The RVBuilder package provides two toolchains, `nds32le-elf-newlib-v5` and `nds64le-elf-newlib-v5`, for software development on Andes RISC-V targets. Both toolchains are based on GNU and LLVM, and support the standard options of GCC, as, and ld, as well as clang and lld. They support compiler, assembler, and linker options specialized for Andes RISC-V targets to enable features such as performance tuning and code size optimization. For details on these Andes-specific compiler, assembler, and linker options, refer to [Andes Programming Guide](./ref/Andes_Programming_Guide_for_ISA_V5_PG012_V3.5.pdf).
 
-The toolchain naming convention denotes the following:
+Take note of the denotations in toolchain naming:
 
 - `nds32`/`nds64` indicates the supported processor architecture. `nds32` for 32-bit Andes RISC-V processors and `nds64` for 64-bit Andes RISC-V processors.
 - `le` indicates that the supported target endianness is little-endian.
@@ -42,16 +42,10 @@ The toolchain naming convention denotes the following:
 
 The appropriate toolchain for a specific Andes target is predefined in the associated chip profile and does not require manual selection. However, for RVBuilder projects that use a custom Makefile, you must update the target-related settings and toolchain paths in `tasks.json` after switching to a target (chip profile) with a different architecture (e.g. changing from 32-bit to 64-bit). The toolchain executable path is located at `${RVBUILDER_PACKAGE_ROOT}/toolchains/${TOOLCHAIN}/bin/`. 
 
+### Linker Script Generator (LdSaG) 
+LdSaG is a tool that generates a linker script from a simplified image layout and memory mapping description file written in Andes Scattering-and-Gathering (SaG) format. Instead of writing complex GNU linker scripts, you can use the SaG syntax to describe the program image layout and memory mapping for Andes RISC-V targets. With the SaG-formatted description file (`*.sag`), the LdSaG tool generates a corresponding linker script.
 
-### Connection Configurations 
-
-AICE, Andes QEMU, maverick, GDB server 
-
-#### ICEman
-
-####    
-
-### Linker Script Generator (LdSaG)
+For details about the SaG syntax and the command-line options for the LdSaG tool, see the chapter _Linker Script Generation_ in [Andes Programming Guide](./ref/Andes_Programming_Guide_for_ISA_V5_PG012_V3.5.pdf). 
 
 ### Flash Burners 
 
