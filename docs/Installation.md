@@ -1,12 +1,12 @@
 
-This section outlines the system requirements and provides step-by-step instructions for installing and the RVBuilder extension in Visual Studio Code, including notes on updates and platform-specific considerations.
+This section outlines the system requirements, installation instructions for the RVBuilder extension in Visual Studio Code, and the extension configuration. 
 
 ## Requirements 
 - **Operating System**: Windows or Linux
 - **Software**: Visual Studio Code (version 1.82 or later) from [Microsoft Visual Studio Code](https://code.visualstudio.com/download)
 
 ## RVBuilder Installation
-1. Download the RVBuilder extension package `rvbuilder-1.0.0.vsix` from the [Andes GitHub RVBuilder repository](https://github.com/andestech/rvbuilder).  
+1. Download the RVBuilder extension package `rvbuilder-1.0.0.vsix` from the [RVBuilder lastest release page](https://github.com/andestech/RVBuilder/releases/tag/v1.0.0).  
 2. In Visual Studio Code, click ![Extension](./images/extension.png) in the **Activity Bar**. 
 3. In the **Extensions** view, click the **More Actions** icon ![dots](./images/dots.png) in the top-right corner, select "Install from VSIX…" from the drop-down menu, and then choose the downloaded file `rvbuilder-1.0.0.vsix` to start the installation. 
 4. After the completion of installation, RVBuilder appears in the list of installed extensions in the **Extensions** view and the **RVBuilder** icon ![RVBuilder icon](./images/RVBuilder_icon.png) is displayed in the **Activity Bar**. These indicate that the installation was successful.
@@ -27,3 +27,16 @@ This section outlines the system requirements and provides step-by-step instruct
     ![Linux installation password](./images/linux_install_pw.png)
 
 ---
+
+## Extension Configuration
+
+Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activity Bar** and select **Settings**. Under the **User** tab, select **Extensions > RVBuilder** in the navigation pane to view the available RVBuilder extension settings and modify them if necessary. 
+
+
+| Setting | Description |
+|---------|-------------|
+| Home Page| Controls whether the RVBuilder Home page is displayed when the VS Code starts. |
+| Package Root | Specifies the installation destination of the RVBuilder package components.
+| Project Workspace | Specifies the path to the project workspace.|
+
+![RVBuilder Settings](./images/RVBuilder_settings.png)

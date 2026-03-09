@@ -1,6 +1,7 @@
 site_name: RVBuilder Documentation
 site_url: https://obscuredarling.github.io/qwpo4578/
-
+repo_url: https://github.com/obscuredarling/qwpo4578 
+repo_name: andestech/RVBuilder
 
 theme: 
   name: material
@@ -48,17 +49,16 @@ markdown_extensions:
 
 nav: 
     - Home: index.md 
-    - Installation: installation.md
-    - Using RVBuilder in VS Code: working.md
-    - Create an RVBuilder Project: project_create.md
-    - Configure an RVBuilder Project: project_config.md
-    - Build an RVBuilder Application: project_build.md
-    - Flash an RVBuilder Application: project_flash.md
-    - Debug an RVBuilder Application: project_debug.md
-    - Components and Tools: components.md
+    - Supported Targets: targets.md
+    - Install RVBuilder: installation.md
+    - Use RVBuilder in VS Code: using_rvbuilder.md
+    - Create a Project: project_create.md
+    - Configure a Project: project_config.md
+    - Build an Application: project_build.md
+    - Flash an Application: project_flash.md
+    - Debug an Application: project_debug.md
     - Demo Applications: demo.md
-    - References: references.md
-    - Code Docs: 
-      - Java: coding/java_code.md
+    #- Code Docs: 
+    #  - Java: coding/java_code.md
 
 
