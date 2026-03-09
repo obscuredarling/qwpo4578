@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://obscuredarling.github.io/qwpo4578/installation/">
+        <link rel="canonical" href="https://obscuredarling.github.io/qwpo4578/using_rvbuilder/">
       
       
-        <link rel="prev" href="../targets/">
+        <link rel="prev" href="../installation/">
       
       
-        <link rel="next" href="../using_rvbuilder/">
+        <link rel="next" href="../project_create/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Install RVBuilder - RVBuilder Documentation</title>
+        <title>Use RVBuilder in VS Code - RVBuilder Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requirements" class="md-skip">
+        <a href="#rvbuilder-specific-interface" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Install RVBuilder
+              Use RVBuilder in VS Code
             
           </span>
         </div>
@@ -318,6 +318,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install RVBuilder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -335,7 +362,7 @@
   <span class="md-ellipsis">
     
   
-    Install RVBuilder
+    Use RVBuilder in VS Code
   
 
     
@@ -353,7 +380,7 @@
   <span class="md-ellipsis">
     
   
-    Install RVBuilder
+    Use RVBuilder in VS Code
   
 
     
@@ -377,35 +404,163 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#rvbuilder-specific-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Requirements
+        RVBuilder-Specific Interface
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RVBuilder-Specific Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-rvbuilder-icon-on-the-activity-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. RVBuilder Icon on the Activity Bar
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#rvbuilder-installation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-rvbuilder-view" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RVBuilder Installation
+        2. RVBuilder View
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#extension-configuration" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-rvbuilder-home-page" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Extension Configuration
+        3. RVBuilder Home Page
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rvbuilder-project-action-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. RVBuilder Project Action Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rvbuilder-settings-in-workspace-configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RVBuilder Settings in Workspace Configuration Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RVBuilder Settings in Workspace Configuration Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tasksjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        tasks.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launchjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        launch.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#components-and-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Components and Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Components and Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chip-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chip Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolchains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toolchains
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linker-script-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linker Script Generator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash-burners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flash Burners
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -413,33 +568,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../using_rvbuilder/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Use RVBuilder in VS Code
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -626,63 +754,143 @@
   
 
 
-  <h1>Install RVBuilder</h1>
+  <h1>Use RVBuilder in VS Code</h1>
 
-<p>This section outlines the system requirements, installation instructions for the RVBuilder extension in Visual Studio Code, and the extension configuration. </p>
-<h2 id="requirements">Requirements</h2>
-<ul>
-<li><strong>Operating System</strong>: Windows or Linux</li>
-<li><strong>Software</strong>: Visual Studio Code (version 1.82 or later) from <a href="https://code.visualstudio.com/download">Microsoft Visual Studio Code</a></li>
-</ul>
-<h2 id="rvbuilder-installation">RVBuilder Installation</h2>
-<ol>
-<li>Download the RVBuilder extension package <code>rvbuilder-1.0.0.vsix</code> from the <a href="https://github.com/andestech/RVBuilder/releases/tag/v1.0.0">RVBuilder lastest release page</a>.  </li>
-<li>In Visual Studio Code, click <img alt="Extension" src="../images/extension.png" /> in the <strong>Activity Bar</strong>. </li>
-<li>In the <strong>Extensions</strong> view, click the <strong>More Actions</strong> icon <img alt="dots" src="../images/dots.png" /> in the top-right corner, select "Install from VSIX…" from the drop-down menu, and then choose the downloaded file <code>rvbuilder-1.0.0.vsix</code> to start the installation. </li>
-<li>
-<p>After the completion of installation, RVBuilder appears in the list of installed extensions in the <strong>Extensions</strong> view and the <strong>RVBuilder</strong> icon <img alt="RVBuilder icon" src="../images/RVBuilder_icon.png" /> is displayed in the <strong>Activity Bar</strong>. These indicate that the installation was successful.</p>
-<p><img alt="RVBuilder install verification" src="../images/RVBuilder_install_verify.png" /></p>
-</li>
-</ol>
-<hr />
-<p><strong>Note</strong></p>
-<ul>
-<li>
-<p>To reinstall or update the RVBuilder extension, uninstall the existing extension before proceeding. After reinstallation, restart VS Code to apply the changes. </p>
-<p><img alt="RVBuilder Uninstall" src="../images/RVBuilder_uninstall.png" /></p>
-</li>
-<li>
-<p>On Linux, a system password is required to grant RVBuilder permissions. After RVBuilder installation, follow the on-screen prompt to click <strong>Run</strong> and enter your system password.</p>
-<p><img alt="Notification for Linux installation" src="../images/notify_for_linux_install.png" />
-<img alt="Linux installation password" src="../images/linux_install_pw.png" /></p>
-</li>
-</ul>
-<hr />
-<h2 id="extension-configuration">Extension Configuration</h2>
-<p>Click <img alt="Setting wheel" src="../images/setting_wheel.png" /> at the bottom of the <strong>Activity Bar</strong> and select <strong>Settings</strong>. Under the <strong>User</strong> tab, select <strong>Extensions &gt; RVBuilder</strong> in the navigation pane to view the available RVBuilder extension settings and modify them if necessary. </p>
+<p>This section introduces the RVBuilder-specific interface and settings for software development with Andes RISC-V targets, as well as the components and tools included in the RVBuilder package.</p>
+<h2 id="rvbuilder-specific-interface">RVBuilder-Specific Interface</h2>
+<h3 id="1-rvbuilder-icon-on-the-activity-bar">1. RVBuilder Icon on the Activity Bar</h3>
+<p>The RVBuilder icon serves as the entry point to the <strong>RVBuilder</strong> view.</p>
+<h3 id="2-rvbuilder-view">2. RVBuilder View</h3>
+<p>This view provides access to the RVBuilder <strong>Home</strong> page.</p>
+<h3 id="3-rvbuilder-home-page">3. RVBuilder Home Page</h3>
+<p>The RVBuilder <strong>Home</strong> page provides quick access to creating a new RVBuilder project or importing an RVBuilder demo project. It also includes links to reference documentation, technical support resources, and Andes Technology social media channels for developers who want to learn more.</p>
+<p><img alt="RVBuilder Entry Interface" src="../images/Interface_entry.png" /></p>
+<h3 id="4-rvbuilder-project-action-items">4. RVBuilder Project Action Items</h3>
+<p>RVBuilder enables a set of project operations through an RVBuilder project pull-down menu or the <strong>Explorer</strong> view title menu to streamline the development workflow. </p>
+<p><img alt="RVBuilder Porject Menu Items" src="../images/RVBuilder_project_pulldown_menu.png" /></p>
+<p><img alt="RVBuilder Title Menu" src="../images/RVBuilder_toolbar.png" /></p>
 <table>
 <thead>
 <tr>
-<th>Setting</th>
+<th>Menu Item</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Home Page</td>
-<td>Controls whether the RVBuilder Home page is displayed when the VS Code starts.</td>
+<td>RVBuilder: Build Project</td>
+<td>Compiles the current project and generates the target binary/executable.</td>
 </tr>
 <tr>
-<td>Package Root</td>
-<td>Specifies the installation destination of the RVBuilder package components.</td>
+<td>RVBuilder: Clean Project</td>
+<td>Removes all build artifacts generated during previous builds.</td>
 </tr>
 <tr>
-<td>Project Workspace</td>
-<td>Specifies the path to the project workspace.</td>
+<td>RVBuilder: Delete Project</td>
+<td>Deletes the selected RVBuilder project, including the configuration and source files.</td>
+</tr>
+<tr>
+<td>RVBuilder: Rebuild Project</td>
+<td>Performs a clean operation followed by a full rebuild.</td>
+</tr>
+<tr>
+<td>RVBuilder: Debug</td>
+<td>Starts debugging the currently active file or the selected project.</td>
+</tr>
+<tr>
+<td>RVBuilder: Settings</td>
+<td>Opens the RVBuilder project settings for configuration and modification.</td>
+</tr>
+<tr>
+<td>RVBuilder: Flash Burner</td>
+<td>Programs the generated project binary to the flash memory of a specified target.</td>
 </tr>
 </tbody>
 </table>
-<p><img alt="RVBuilder Settings" src="../images/RVBuilder_settings.png" /></p>
+<h2 id="rvbuilder-settings-in-workspace-configuration-files">RVBuilder Settings in Workspace Configuration Files</h2>
+<p>Projects configured with RVBuilder include specialized workspace settings required for development with Andes RISC-V targets. These settings are written to VS Code workspace configuration files in the <code>.vscode</code> folder under the project root directory. RVBuilder either automatically generates the workspace configuration files or patches existing ones to ensure the environment is optimized for Andes RISC-V development. </p>
+<p>Among the RVBuilder workspace settings, pay attention to the following: </p>
+<h3 id="tasksjson"><code>tasks.json</code></h3>
+<p>For projects that use the Makefile automatically generated by RVBuilder (that is, the option <strong>Use RVBuilder-generated Makefile</strong> is selected in a project's <a href="../project_config/#target-configuration"><strong>Target Configuration</strong></a>), the build task settings in the task configuration file are synchronized with the target configuration and build options specified in the project settings.</p>
+<p>However, if the project uses a custom Makefile (i.e., the option <strong>Use RVBuilder-generated Makefile</strong> is unchecked in a project's <a href="../project_config/#target-configuration"><strong>Target Configuration</strong></a>), changing the project toolchain requires you to manually update the toolchain executable paths in the file. Otherwise, build errors may occur. </p>
+<p>Note that a toolchain change is typically caused by a change in the selected chip profile. For more about toolchains in the RVBuilder package and their paths, see <a href="./#toolchains"><strong>Toolchains</strong></a>.</p>
+<p><img alt="Toolchain Path" src="../images/toolchain_path_in_tasks_file.png" /></p>
+<h3 id="launchjson"><code>launch.json</code></h3>
+<p>Most workspace settings in this debug configuration file are generated automatically for Andes RISC-V development. By default, </p>
+<ul>
+<li>the launch <code>type</code> is set to <code>rvbuilder-debug</code>.</li>
+<li>the <code>connection</code> type and <code>program</code> path are synchronized with the target configuration and build settings defined in the project settings. </li>
+<li>
+<p>the <code>loadMemoryMap</code> option is set to <code>true</code>, which loads the program executable according to the memory regions defined in the selected chip profile. To load the program executable without applying the predefined memory mapping, set this option to <code>false</code>.</p>
+<p><img alt="Load Memory Map" src="../images/mem_map_in_launch.png" /></p>
+</li>
+</ul>
+<p>You can further customize debugger behavior using the following options:</p>
+<ul>
+<li><code>stopAtEntry</code> controls whether to halt execution at the program entry point when the debug session starts.</li>
+<li><code>setupCommands</code> specifies debugger commands that are executed automatically at the start of the debug session.</li>
+</ul>
+<h2 id="components-and-tools">Components and Tools</h2>
+<p>RVBuilder includes a set of components and tools that support the complete software development workflow for Andes RISC-V–based targets. These components provide predefined configurations and utilities required throughout development, including target configuration files (Chip Profiles), toolchains, the Linker Script Generator (LdSaG), and flash burners. </p>
+<p>The integration of these components within VS Code enables you to manage build, run and debug workflows through a unified interface, eliminating the need for manual installation and configuration of individual components for the desired Andes RISC-V target.</p>
+<p>The following provide brief introduction to the key components and tools in the RVBuilder package.</p>
+<h3 id="chip-profiles">Chip Profiles</h3>
+<p>Chip profiles describe the specifications and software configuration of specific target platforms. RVBuilder provides a set of predefined chip profiles for Andes RISC-V targets. Each chip profile contains the required software settings for the corresponding target, such as </p>
+<ul>
+<li>the preferred toolchain</li>
+<li>compiler, linker, and assembler options specific to the target core</li>
+<li>target connection configuration and related arguments</li>
+</ul>
+<p>When creating or configuring an RVBuilder project, select an appropriate chip profile to match the intended target and take note of the chip profile naming convention when making a selection.</p>
+<p>The chip profiles follow the naming format:</p>
+<blockquote>
+<p><strong><code>ADP-&lt;PLATFORM&gt;-&lt;CORE&gt;-&lt;SUFFIX&gt;</code></strong></p>
+</blockquote>
+<ul>
+<li><code>ADP</code> stands for Andes Development Platform. It is used as the prefix for Andes target configurations.</li>
+<li><strong><code>&lt;PLATFORM&gt;</code></strong> refers to an AndeShape™ platform. Supported platform IPs or development platforms include: AE350 and Corvette-F1. For more information, see <a href="https://www.andestech.com/en/products-solutions/andeshape-platforms/">AndeShape™ Platforms</a>.</li>
+<li><strong><code>&lt;CORE&gt;</code></strong> refers to a 32-bit or 64-bit AndesCore™ processor core. The RVBuilder package supports a variety of AndesCore processor series designed for different applications
+For more information, see <a href="https://www.andestech.com/en/products-solutions/andescore-processors/">AndesCore™ Processors</a>.</li>
+<li>
+<p><strong><code>&lt;SUFFIX&gt;</code></strong> denotes additional features or configurations of the target. Supported suffixes include: </p>
+<ul>
+<li><code>RVB</code> — Bit-manipulation extension enabled</li>
+<li><code>SE</code> — Security processor configuration</li>
+<li><code>1C</code> — Single-core configuration of a multi-core target</li>
+<li><code>SMP</code> — Symmetric multiprocessing configuration for multi-core targets</li>
+</ul>
+</li>
+</ul>
+<p>Examples of chip profiles within the RVBuilder Package include ADP-AE250-N25F, ADP-AE350-NX45-RVB, ADP-AE350-AX46MPV-SMP and more. </p>
+<h3 id="toolchains">Toolchains</h3>
+<p>The RVBuilder package provides two toolchains, <code>nds32le-elf-newlib-v5</code> and <code>nds64le-elf-newlib-v5</code>, for software development on Andes RISC-V targets. Both toolchains are based on GNU and LLVM, and support the standard options of GCC, as, and ld, as well as clang and lld. They support compiler, assembler, and linker options specialized for Andes RISC-V targets to enable features such as performance tuning and code size optimization. For details on these Andes-specific compiler, assembler, and linker options, refer to <a href="../ref/Andes_Programming_Guide_for_ISA_V5_PG012_V3.5.pdf">Andes Programming Guide</a>.</p>
+<p>Take note of the denotations in toolchain naming:</p>
+<ul>
+<li><code>nds32</code>/<code>nds64</code> indicates the supported processor architecture. <code>nds32</code> for 32-bit Andes RISC-V processors and <code>nds64</code> for 64-bit Andes RISC-V processors.</li>
+<li><code>le</code> indicates that the supported target endianness is little-endian.</li>
+<li><code>elf</code> indicates the output binary format used by the compiler, assembler, and linker.  </li>
+<li><code>newlib</code> indicates that the toolchain provides the Newlib support and can be compiled with either the GCC or LLVM compiler. </li>
+<li><code>v5</code> indicates that the toolchain targets the AndeStar™ Instruction Set Architecture (ISA) V5 implementation.</li>
+</ul>
+<p>The appropriate toolchain for a specific Andes target is predefined in the associated chip profile and does not require manual selection. However, for RVBuilder projects that use a custom Makefile, you must update the target-related settings and toolchain paths in <code>tasks.json</code> after switching to a target (chip profile) with a different architecture (e.g. changing from 32-bit to 64-bit). The toolchain executable path is located at <code>${RVBUILDER_PACKAGE_ROOT}/toolchains/${TOOLCHAIN}/bin/</code>. </p>
+<h3 id="linker-script-generator">Linker Script Generator</h3>
+<p>The Linker Script Generator (LdSaG) is a tool that generates a linker script from a simplified image layout and memory mapping description file written in Andes Scattering-and-Gathering (SaG) format. Instead of writing complex GNU linker scripts, you can use the SaG syntax to describe the program image layout and memory mapping for Andes RISC-V targets. With the SaG-formatted description file (<code>*.sag</code>), the LdSaG tool generates a corresponding linker script.</p>
+<p>For details about the SaG syntax and the command-line options for the LdSaG tool, see the chapter <em>Linker Script Generation</em> in <a href="../ref/Andes_Programming_Guide_for_ISA_V5_PG012_V3.5.pdf">Andes Programming Guide</a>. </p>
+<h3 id="flash-burners">Flash Burners</h3>
+<p>RVBuilder supports two approaches to perform in-system programming on Andes RISC-V real-board targets (i.e., Andes RISC-V targets connected via AICE, Maverick, or GDB server) . </p>
+<ol>
+<li>
+<p><strong>Flash Burn</strong> requires a flash burner, <code>PAR_burn</code> or <code>SPI_burn</code>, to communicate with ICEman using socket protocols. The <code>PAR_burn</code> utility programs parallel flash, while the <code>SPI_burn</code> utility programs SPI flash.</p>
+</li>
+<li>
+<p><strong>Target Burn</strong> requires the flash burner <code>target_burn_frontend</code> to communicate with ICEman using telnet protocols, along with a target application to program the flash memory directly. RVBuilder provides the target burn application <code>target_SPI_v5_32.bin</code> for programming flash on Andes 32-bit RISC-V targets and <code>target_SPI_v5_64.bin</code> for Andes RISC-V 64-bit targets. Compared with the <strong>Flash Burn</strong> approach, this approach accelerates the programming process.</p>
+</li>
+</ol>
+<p>The flash burners and target applications required for the above two programming approaches are included in the RVBuilder package. Their locations are as follows:</p>
+<ul>
+<li>Flash burner for <strong>Flash Burn</strong> or <strong>Target Burn</strong> (<code>PAR_burn</code>, <code>SPI_burn</code> and <code>target_burn_frontend</code>): <code>${RVBUILDER_PACKAGE_ROOT}/RVBuilder_1.0.0/flash/bin/</code>.</li>
+<li>target application for the <strong>Target Burn</strong> method (<code>target_SPI_v5_32.bin</code> or <code>target_SPI_v5_64.bin</code>): <code>${RVBUILDER_PACKAGE_ROOT}/RVBuilder_1.0.0/flash/target_bin/</code>.</li>
+</ul>
 
 
 
