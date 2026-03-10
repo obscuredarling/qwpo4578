@@ -11,7 +11,7 @@ RVBuilder leverages VS Code’s native debugging capabilities, together with add
    ![Serial Monitor Extension](./images/serial_monitor_extension.png)
 
 ### Set Breakpoints (Optionally)
-Set breakpoints to pause program execution and inspect the application at specific points. For how to set breakpoints in VS Code, see [Breakpoints](https://code.visualstudio.com/docs/debugtest/debugging#_breakpoints). 
+Set breakpoints to pause program execution and inspect the application at specific points. For how to set breakpoints in VS Code, see [**Breakpoints**](https://code.visualstudio.com/docs/debugtest/debugging#_breakpoints). 
 
 ## Start Debugging
 1. Use either of the following ways to initiate a debug process of an RVBuilder project.

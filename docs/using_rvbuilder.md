@@ -85,9 +85,9 @@ The chip profiles follow the naming format:
 > **`ADP-<PLATFORM>-<CORE>-<SUFFIX>`**
 
 - `ADP` stands for Andes Development Platform. It is used as the prefix for Andes target configurations.
-- **`<PLATFORM>`** refers to an AndeShape™ platform. Supported platform IPs or development platforms include: AE350 and Corvette-F1. For more information, see [AndeShape™ Platforms](https://www.andestech.com/en/products-solutions/andeshape-platforms/).
+- **`<PLATFORM>`** refers to an AndeShape™ platform. Supported platform IPs or development platforms include: AE350 and Corvette-F1. For more information, see [**AndeShape™ Platforms**](https://www.andestech.com/en/products-solutions/andeshape-platforms/).
 - **`<CORE>`** refers to a 32-bit or 64-bit AndesCore™ processor core. The RVBuilder package supports a variety of AndesCore processor series designed for different applications
-For more information, see [AndesCore™ Processors](https://www.andestech.com/en/products-solutions/andescore-processors/).
+For more information, see [**AndesCore™ Processors**](https://www.andestech.com/en/products-solutions/andescore-processors/).
 - **`<SUFFIX>`** denotes additional features or configurations of the target. Supported suffixes include: 
 
     - `RVB` — Bit-manipulation extension enabled
@@ -98,7 +98,7 @@ For more information, see [AndesCore™ Processors](https://www.andestech.com/en
 Examples of chip profiles within the RVBuilder Package include ADP-AE250-N25F, ADP-AE350-NX45-RVB, ADP-AE350-AX46MPV-SMP and more. 
 
 ### Toolchains
-The RVBuilder package provides two toolchains, `nds32le-elf-newlib-v5` and `nds64le-elf-newlib-v5`, for software development on Andes RISC-V targets. Both toolchains are based on GNU and LLVM, and support the standard options of GCC, as, and ld, as well as clang and lld. They support compiler, assembler, and linker options specialized for Andes RISC-V targets to enable features such as performance tuning and code size optimization. For details on these Andes-specific compiler, assembler, and linker options, refer to [Andes Programming Guide](./ref/Andes_Programming_Guide_for_ISA_V5_PG012_V3.5.pdf).
+The RVBuilder package provides two toolchains, `nds32le-elf-newlib-v5` and `nds64le-elf-newlib-v5`, for software development on Andes RISC-V targets. Both toolchains are based on GNU and LLVM, and support the standard options of GCC, as, and ld, as well as clang and lld. They support compiler, assembler, and linker options specialized for Andes RISC-V targets to enable features such as performance tuning and code size optimization. For details on these Andes-specific compiler, assembler, and linker options, see [**Andes Programming Guide**](./ref/Andes_Programming_Guide_for_ISA_V5_PG012_V3.5.pdf).
 
 Take note of the denotations in toolchain naming:
 
@@ -113,7 +113,7 @@ The appropriate toolchain for a specific Andes target is predefined in the assoc
 ### Linker Script Generator
 The Linker Script Generator (LdSaG) is a tool that generates a linker script from a simplified image layout and memory mapping description file written in Andes Scattering-and-Gathering (SaG) format. Instead of writing complex GNU linker scripts, you can use the SaG syntax to describe the program image layout and memory mapping for Andes RISC-V targets. With the SaG-formatted description file (`*.sag`), the LdSaG tool generates a corresponding linker script.
 
-For details about the SaG syntax and the command-line options for the LdSaG tool, see the chapter _Linker Script Generation_ in [Andes Programming Guide](./ref/Andes_Programming_Guide_for_ISA_V5_PG012_V3.5.pdf). 
+For details about the SaG syntax and the command-line options for the LdSaG tool, see the chapter _Linker Script Generation_ in [**Andes Programming Guide**](./ref/Andes_Programming_Guide_for_ISA_V5_PG012_V3.5.pdf). 
 
 ### Flash Burners 
 

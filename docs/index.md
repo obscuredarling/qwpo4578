@@ -1,5 +1,6 @@
 ## RVBuilder 
-RVBuilder is an integrated development environment consisting of essential components and tools for software development with Andes RISC-V processors. Delivered as Visual Studio (VS) Code extension, it enables you to quickly set up a development environment for Andes RISC-V targets without installing individual Andes components. You can build, debug, and analyze applications, as well as manage project settings, directly within VS Code. 
+
+RVBuilder is an integrated development environment that provides essential components and tools for software development on targets embedded with Andes RISC-V processors. Delivered as Visual Studio (VS) Code extension, it includes required toolchains and components, such as compiler, simulator, ICE (In-Circuit Emulator) driver, and flash drivers, enabling you to quickly set up a development environment for Andes RISC-V targets. With RVBuilder, you can configure projects, and build, run and debug applications directly within VS Code. 
 
 ## Features 
 - **Tailored for Makers and Educational Users**
@@ -10,17 +11,21 @@ RVBuilder is an integrated development environment consisting of essential compo
   
     Includes a comprehensive Software Development Kit (SDK) for developing applications on Andes RISC-V targets.
   
-- **Broad Target Support**
+- **Extensive Target Support**
   
-    Compatible with both single-core and multicore target systems.
+    Compatible with a wide range of Andes evaluation platforms and RISC-V processors, including single-core and Symmetric Multiprocessing (SMP) systems.
   
 - **Visual Project Management**
   
-    Provides an intuitive graphical interface in VS Code to enable easy configuration of project target, connection and build settings. 
+    Provides an intuitive graphical interface to enable easy configuration of project target, connection and build settings. 
   
-- **Hardware Flashing and Debugging**
+- **Streamlined Hardware Flashing**
   
-    Provides flash programming tools and debugging support for deploying code to and interacting with physical Andes RISC-V target hardware.
+    Provides flash programming utilities and a dedicated interface for deploying code to Andes target hardware. 
+    
+- **Integrated Debug Environment**
+  
+    Enables source-level debugging and control with native VS Code commands and allows inspection of variables, registers, and memory in real-time.
   
 - **Ready-to-Use Demo Applications**
   
