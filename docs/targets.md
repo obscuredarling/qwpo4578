@@ -9,10 +9,7 @@ The target systems supported by RVBuilder in VS Code include the AndeShape™ AE
 
 To set up the physical network between RVBuilder and either type of target, see the figure below.
 
-![Physical Target Network](./images/target_network-smaller.png) { width=600 height=350 }
-
-![Physical Target Network](./images/target_network.png)
-
+![Physical Target Network](./images/target_network.png){ width="75%" height="60%"}
 
 ## Target Connection
 After setting up the physical network, you can build the target connection for program development. RVBuilder supports the following four connection types, each corresponding to a specific target environment. You can select one of these connection types in the RVBuilder project settings to establish the target connection for a project.
