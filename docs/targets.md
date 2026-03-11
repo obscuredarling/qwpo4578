@@ -1,3 +1,4 @@
+This section outlines the physical network setups and target connection types supported by RVBuilder.
 
 ## Physical Network 
 The target systems supported by RVBuilder in VS Code include the AndeShape™ AE350 or Corvette-F1 platform integrated with an AndesCore™ single-core or symmetric multiprocessing (SMP) RISC-V processor. These targets can be either a simulator target or an In-Circuit Emulator (ICE) target, connected through a local or remote Ethernet network using the TCP/IP protocol. 

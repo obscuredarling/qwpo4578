@@ -4,7 +4,7 @@ For Andes RISC-V targets connected via AICE, Maverick, or GDB server, RVBuilder 
 ## Start Programming 
 To perform in-system programming using RVBuilder, proceed as follows:
 
-1. In the **Explorer** view, right-click the project and select **RVBuilder: Flash Burner** on the drop-down menu. 
+1. In the **Explorer** view, right-click the project and select "RVBuilder: Flash Burner" on the drop-down menu. 
 
 2. In the opened **Flash Burner** settings UI, select the tab corresponding to your programming approach and configure the programming options. For supported in-system programming approaches by RVBuilder for Andes RISC-V targets, see [**Flash Burner**](./using_rvbuilder.md#flash-burners). 
 

@@ -13,7 +13,7 @@ RVBuilder is an integrated development environment that provides essential compo
   
 - **Extensive Target Support**
   
-    Compatible with a wide range of Andes evaluation platforms and RISC-V processors, including single-core and Symmetric Multiprocessing (SMP) systems.
+    Compatible with a wide range of Andes development platforms and RISC-V processors, including single-core and Symmetric Multiprocessing (SMP) systems.
   
 - **Visual Project Management**
   

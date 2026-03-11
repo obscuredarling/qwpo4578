@@ -30,7 +30,7 @@ This section outlines the system requirements, installation instructions for the
 
 ## Extension Configuration
 
-Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activity Bar** and select **Settings**. Under the **User** tab, select **Extensions > RVBuilder** in the navigation pane to view the available RVBuilder extension settings and modify them if necessary. 
+Click ![Setting wheel](./images/setting_wheel.png) at the bottom of the **Activity Bar** and select "Settings". Under the **User** tab, select **Extensions > RVBuilder** in the navigation pane to view the available RVBuilder extension settings and modify them if necessary. 
 
 
 | Setting | Description |

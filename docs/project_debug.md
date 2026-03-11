@@ -24,8 +24,13 @@ Set breakpoints to pause program execution and inspect the application at specif
     
         ![project debug 2](./images/debug_from_run_and_debug.png)
 
-2. The debug session starts. View debugging outputs from the **Debug Console** panel.
-    ![debug console](./images/debug_console.png)
+2. The debug session starts. 
+
+    - For ICE targets (AICE or Maverick targets), view debugging outputs from the **Debug Console** panel.
+        ![debug console](./images/debug_console.png)
+
+    - For simulator targets (Andes QEMU targets), the output messages are printed to a **gdb-server** terminal. 
+        ![gdbserver terminal](./images/gdbserver-terminal.png)
 
 3. Use the **Debug toolbar** to control the flow of the debug session, such as stepping through code or pausing execution. 
 
