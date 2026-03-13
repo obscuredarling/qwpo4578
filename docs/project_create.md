@@ -13,16 +13,16 @@
 
 ## Add RVBuilder Settings to an Existing Project 
 
-For an existing non-RVBuilder project, RVBuilder settings can be added to enable RVBuilder features and streamline development on targets embedded with Andes RISC-V processors. Proceed as follows:
+For an existing project created in a non-RVBuilder environment, you can enable it to have RVBuilder settings and features to streamline development on Andes RISC-V targets. Proceed as follows:
 
-1. Add an existing project folder to the current workspace. 
+1. In the **Explorer** view, add an existing project folder to the current workspace. 
 
-2. In the **Explorer** view, select the interested project folder. Next, click any [RVBuilder project action item](./using_rvbuilder.md#4-rvbuilder-project-action-items) from either the project drop-down menu or the **Explorer** view title menu.
+2. Right-click the project folder and select any [RVBuilder project action item](./using_rvbuilder.md#4-rvbuilder-project-action-items) — except "RVBuilder: Delete the Project" — from either the project drop-down menu or the **Explorer** view title menu.
 
     For example, select an existing "hello" project and click the **RVBuilder: Settings** button on the **Explore** view title menu.
     ![Add RVBuilder Settings](./images/add_rvbuilder_setting.png)
 
-3. A notification dialog appears indicating that the selected project is not yet configured for RVBuilder development. Click **Yes** to add the required RVBuilder settings to the project.
+3. A notification dialog appears indicating that the project is not yet configured for development with RVBuilder. Click **Yes** to add the RVBuilder settings to the project.
     
     ![RVBuilder Settings Notification](./images/add_rvbuilder_setting_notify.png)
 

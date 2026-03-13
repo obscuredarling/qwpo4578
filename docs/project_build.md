@@ -29,9 +29,10 @@ The build process and result are displayed in the **Terminal** view.
 
 
 ## Build Artifacts 
-For RVbuilder projects targeting a single-core Andes RISC-V target, the program executable (`.adx`) and object file are generated in `${PROJECT}/[Debug|Release]` and the binutil output (e.g., `.bin`) in `${PROJECT}/[Debug|Release]/output`. 
+The build artifacts are generated in the following locations:
 
-For projects targeting a multi-core Andes RISC-V target, the program executable (`.adx`) and object file are generated in `${PROJECT}/${CORE}/[Debug|Release]-${CORE}` and the binutil output (e.g., `.bin`) is in `${PROJECT}/${CORE}/[Debug|Release]-${CORE}/output`. 
+- **Program executable** (`.adx`) and **object files**: `${PROJECT}/[Debug|Release]` 
+- **Binutil outputs** (e.g. `.bin`): `${PROJECT}/[Debug|Release]/output`. 
 
-The following shows build artifact locations for a Test project to be run on a single-core Andes RISC-V target. 
+
  ![build artifact location](./images/build_artifact_location.png)

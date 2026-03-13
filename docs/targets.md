@@ -13,24 +13,24 @@ To set up the physical network between RVBuilder and either type of target, see 
 ![Physical Target Network](./images/target_network.png){ width="75%" height="60%"}
 
 ## Target Connection
-After setting up the physical network, you can build the target connection for program development. RVBuilder supports the following four connection types, each corresponding to a specific target environment. You can select one of these connection types in the RVBuilder project settings to establish the target connection for a project.
+After setting up the physical network, you can build the target connection for program development. RVBuilder supports the following four connection types, each corresponding to a specific target environment. You can select one of these connection types in the RVBuilder's **Project Settings** interface to establish the target connection for a project. See [**Target Configuration**](./project_config.md#target-configuration) for a project. 
 
 ### Andes QEMU (Local Simulator Target)
-This connection type is used to connect to a virtual evaluation platform through the Andes QEMU emulator, a QEMU system emulator designed to simulate Andes RISC-V target architectures. 
+This connection type connects to a virtual evaluation platform through the Andes QEMU emulator, a QEMU system emulator designed to simulate Andes RISC-V target architectures. 
 
 Andes QEMU targets prioritize speed and flexibility over accuracy. Therefore, they are well-suited for early-stage software development and rapid design verification, where cycle or timing precision and detailed hardware modeling are not required.
 
 Note that Andes QEMU does not fully simulate all peripheral functions of Andes target architectures. For a detailed list of its supported peripherals and available configuration options for the emulator, see [**Andes QEMU Emulator Reference Manual**](./ref/Andes_QEMU_Emulator_Reference_Manual_UM284_V1.2.pdf). 
 
 ### AICE (Local ICE Target Connection)
-This connection type is used to connect to a real evaluation platform through an Andes ICE box. You can use the Andes ICE Management Software, ICEman, to control the ICE debugger during program execution. For a complete list of ICEman options and their usage, see [**Andes ICE Management Software (ICEman) User Manual**](./ref/Andes_ICE_Management_Software_UM067_V4.1.pdf).    
+This connection type connects to a real evaluation platform through an Andes ICE box. You can use the Andes ICE Management Software, ICEman, to control the ICE debugger during program execution. For a complete list of ICEman options and their usage, see [**Andes ICE Management Software (ICEman) User Manual**](./ref/Andes_ICE_Management_Software_UM067_V4.1.pdf).    
 
 
 ### Maverick (Local ICE target connection)
-This connection type is used to connect to a real evaluation platform through a SEGGER J-Link using a custom implementation.
+This connection type connects to a real evaluation platform through a SEGGER J-Link using a custom implementation.
 
 Note that full compatibility with all SEGGER J-Link versions and features is not guaranteed in RVBuilder, as support may vary depending on the firmware version and updates.
 
 ### GDB Server (Remote ICE/Simulator Target Connection)
 
-This connection type is used to connect to an Andes QEMU, ICE, or Maverick target running on a remote host. It requires the hostname or IP address of the remote host as well as the port number used by GDB to establish the connection.    
+This connection type connects to an Andes QEMU, ICE, or Maverick target running on a remote host. It requires the hostname or IP address of the remote host as well as the port number used by GDB to establish the connection.    

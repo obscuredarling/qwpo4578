@@ -10,8 +10,8 @@ RVBuilder provides a graphical user interface (GUI) for configuring target and b
 |----------------------|------------|-------|
 | **Active Configuration** | Selects the build configuration for the project. Available options include **Debug** and **Release**. | |
 | **Chip Profile** | Specifies the chip profile associated with the target. The chip profile defines the target specifications and corresponding software configuration files. | See [**Chip Profiles**](./using_rvbuilder.md#chip-profiles). |
-| **Connection** | Specifies the target connection type used for development. Supported connection types include **AICE**, **Andes QEMU**, **Maverick**, and **GDB server**.<br><br> For local target connection, additional connection options can be specified in **Misc Arguments** field. See [Andes QEMU Emulator Reference Manual](./ref/Andes_QEMU_Emulator_Reference_Manual_UM284_V1.2.pdf) and [Andes ICE Management Software (ICEman) User Manual](./ref/Andes_ICE_Management_Software_UM067_V4.1.pdf) for available options with Andes QEMU or AICE connection. |See **[Target Connection](./targets.md#target-connection)** for details of the connection types.<br> <br>For AICE connection, take note of the following:<br>1. RVBuilder automatically detects and displays the plugged-in ICE device along with its position. If multiple local ICE devices are detected, they are listed together for selection.<br>2. When using an AICE-MINI+, AICE-T2 or AICE MICRO ICE box, you must specify the debug interface of the target board. Available options include<br>- **Auto**: Tries the JDP mode first. If it fails, use the SDP mode.<br>- **SDP (2-wire)**: Uses the SDP mode (with 2-wire debug interface).<br>- **JDP (4-wire)**: Uses the JDP mode (with 4-wire debug interface) |
-| **Toolchain** | Displays the toolchain selected for development. | See [**Toolchains**](./using_rvbuilder.md#toolchains). |
+| **Connection** | Specifies the target connection type used for development. Supported connection types include **AICE**, **Andes QEMU**, **Maverick**, and **GDB server**. For details of the connection types, see **[Target Connection](./targets.md#target-connection)**. | <br> For local target connections, additional options can be specified in **Misc Arguments** field. See [Andes QEMU Emulator Reference Manual](./ref/Andes_QEMU_Emulator_Reference_Manual_UM284_V1.2.pdf) and [Andes ICE Management Software (ICEman) User Manual](./ref/Andes_ICE_Management_Software_UM067_V4.1.pdf) for available options for Andes QEMU or AICE connection.<br><br>For AICE connection, also take note of the following:<br>1. RVBuilder automatically detects and displays the plugged-in ICE device along with its position. If multiple local ICE devices are detected, they are listed together for selection.<br>2. When using an AICE-MINI+, AICE-T2 or AICE MICRO ICE box, you must specify the debug interface of the target board. Available options include<br>&bull; **Auto**: Tries the JDP mode first. If it fails, use the SDP mode.<br>&bull; **SDP (2-wire)**: Uses the SDP mode (with 2-wire debug interface).<br>&bull; **JDP (4-wire)**: Uses the JDP mode (with 4-wire debug interface) |
+| **Toolchain** | Displays the toolchain selected for the target. | See [**Toolchains**](./using_rvbuilder.md#toolchains). |
 
 
 
@@ -22,14 +22,14 @@ The **Makefile** section specifies whether the project uses the Makefile automat
     ![Use RVBuilder-Generated Makefile](./images/RVBuilder_makefile_option.png)
 
 ## Build Settings
-For a project configured to use the RVBuilder-generated Makefile, RVBuilder displays the build settings in the **Project Settings** GUI. You can configure the compiler, linker, assembler, GNU bin utilities (NM, Readelf, Objdump, Objcopy, Size), and linker script generator (LdSaG) directly in **Project Settings**.
+For a project configured to use the RVBuilder-generated Makefile, RVBuilder displays the build settings in the **Project Settings** interface. You can configure the compiler, linker, assembler, GNU bin utilities (NM, Readelf, Objdump, Objcopy, Size), and linker script generator (LdSaG) directly in **Project Settings**.
 
-For most build tools or utilities in the **Build Settings** section, the interface includes:
+For most build tools or utilities in the **Build Settings** section, their configuration interface includes:
 
   - **Preview of flags**: Displays the complete command-line options currently applied to the tool or utility.
-  - **Misc Args**: Allows you to specify additional or specialized options for the tool or utility. For supported options by the selected toolchain, see [**Toolchains**](./using_rvbuilder.md#toolchains).
+  - **Misc Args**: Allows you to specify additional or specialized options for the tool or utility. For the options supported by the selected toolchain, see [**Toolchains**](./using_rvbuilder.md#toolchains).
 
-The interface also provides additional configuration fields/options for specific tools and utilities, as outlined below. 
+The interface also includes additional configuration settings for certain tools and utilities, as outlined below. 
 
 ![Build Settings](./images/project_build_settings.png)
 
@@ -41,7 +41,7 @@ The interface also provides additional configuration fields/options for specific
 ### Linker 
 
 - **Linker Script (-T)**: Specifies a custom linker script for the target. This field is overwritten and shown as `$(LDSAG_OUT)` when the LdSaG tool is enabled (i.e., when the **Generate linker script** option in the **LdSaG** settings is selected).
-- **Loaded Address**: Specifies the memory addresses used when loading the program image. This section is only available when a custom linker script (not generated by LdSaG) is used. 
+- **Loaded Address**: Specifies the memory addresses used when loading the program image. This section is only available when a custom linker script (i.e., not generated by LdSaG) is used. 
     - **Program Start Address (0x)**: Specifies the start address of the program in target memory. 
     - **Data Address (0x)**: Specifies the start address of the program data in target memory. 
     - **Stack Address (0x)**: Specifies the start address of the stack in target memory. 

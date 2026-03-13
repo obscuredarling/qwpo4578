@@ -4,10 +4,10 @@ This section describes how to debug applications for Andes RISC-V targets using 
 ### Install Required Extensions 
 RVBuilder leverages VS Code’s native debugging capabilities, together with additional extensions, to provide comprehensive debug support for Andes RISC-V targets. Before you start a debug session, search and install the following extensions required for debugging in the **Extensions** view:
 
-- **Eclipse CDT Cloud Memory Inspector**: For monitoring and modifying memory values.  
+- **Eclipse CDT Cloud Memory Inspector**: For monitoring and modifying memory values.<br>  
    ![Memory Inspector Extension](./images/memory_inspector_extension.png)
 
-- **Serial Monitor**: For viewing outputs from serial ports of Andes RISC-V targets. 
+- **Serial Monitor**: For viewing outputs from serial ports.<br> 
    ![Serial Monitor Extension](./images/serial_monitor_extension.png)
 
 ### Set Breakpoints (Optionally)
@@ -29,10 +29,10 @@ Set breakpoints to pause program execution and inspect the application at specif
     - For ICE targets (AICE or Maverick targets), view debugging outputs from the **Debug Console** panel.
         ![debug console](./images/debug_console.png)
 
-    - For simulator targets (Andes QEMU targets), the output messages are printed to a **gdb-server** terminal. 
+    - For simulator targets (Andes QEMU targets), view the output messages from a **gdb-server** terminal. 
         ![gdbserver terminal](./images/gdbserver-terminal.png)
 
-3. Use the **Debug toolbar** to control the flow of the debug session, such as stepping through code or pausing execution. 
+3. Use the **Debug Toolbar** to control the flow of the debug session, such as stepping through code or pausing execution. 
 
      ![debug toolbar](./images/debug_toolbar.png) 
 
@@ -40,12 +40,12 @@ Set breakpoints to pause program execution and inspect the application at specif
    
     | Action | Description |
     |--------|-------------|
-    | Continue/Pause | Continue: Resume program execution.<br>Pause: Suspend program execution. |
+    | Continue/Pause | &bull; Continue: Resume program execution.<br>&bull; Pause: Suspend program execution. |
     | Step Over | Execute the next statement without inspecting or following its component steps.|
     | Step Into | Enter the next statement to follow its execution line-by-line. |
     | Step Out | When inside a function, return to the earlier execution context. |
     | Restart | Terminate the current program execution and start debugging again using the current configuration. |
-    | Stop/Disconnect | Stop: Terminate the current program execution.<br>Disconnect: Detach debugger from a core without changing the execution status (running/pause). |
+    | Stop/Disconnect | &bull; Stop: Terminate the current program execution.<br>&bull; Disconnect: Detach debugger from a core without changing the execution status (running/pause). |
 
 4. During debugging, examine runtime information such as program variables, CPU/pheripheral register values, and stack frames in the **Run and Debug** view. 
 
@@ -94,19 +94,19 @@ The **Disassembly** view displays the machine instructions for the selected stac
 
 ### Breakpoints
 
-The **Breakpoint** section displays all breakpoints set for the current project. You can manage breakpoints directly in this section by enabling, disabling, or removing them as needed.
+The **Breakpoint** section displays all breakpoints set in your code. You can manage breakpoints directly in this section by enabling, disabling, or removing them as needed.
 
  ![Breakpoint](./images/breakpoint.png) 
 
 ### RVBuilder SoC Registers
 
-The **RVBuilder SoC Registers** section displays the runtime status of System-on-a-Chip (SoC) registers for RVBuilder projects. These registers are organized hierarchically by peripheral, with each entry showing the base address, register offset, and current value. Bit fields are also decoded for easier inspection. SoC register values are updated in this section during debugging, enabling direct observation and verification of peripheral states.
+The **RVBuilder SoC Registers** section displays the runtime status of System-on-a-Chip (SoC) registers for RVBuilder projects. These registers are organized hierarchically by peripheral, with each entry showing the base address, register offset, and current value. Bit fields are also decoded for easier inspection. SoC register values are updated during debugging, allowing direct observation and verification of peripheral states.
 
  ![SoC Registers](./images/soc_registers.png) 
 
 ### Memory Inspector 
 
-The **Memory Inspector** view is available after installing the **Eclipse CDT Cloud Memory Inspector** extension. It enables inspection of memory regions on a target in a debug session. It allows you to navigate to a specified memory address, view memory data in various formats, adjust display settings, and modify memory content if needed. 
+The **Memory Inspector** view is available after installing the **Eclipse CDT Cloud Memory Inspector** extension. It enables inspection of memory regions on a target in a debug session. You can navigate to a specified memory address, view memory data in various formats, adjust display settings, and modify memory content if needed. 
 
 To open the view, press F1 and run "Memory: Show Memory Inspector" from the command palette, or right-click a variable in the **Variables** section and select "Show in Memory Inspector".
 
@@ -118,8 +118,8 @@ The **Serial Monitor** terminal is available after installing the **Serial Monit
 
  ![Serial Monitor](./images/serial_monitor.png) 
 
-For Andes RISC-V targets connected through AICE/Maverick/GDB server, select **Serial** as the monitor mode, specify the serial port and baud rate, and click the **Start Monitoring** button to establish the serial connection and view outputs from the target. Then, click the **Stop Monitoring** button to end the monitoring session.  
+For Andes RISC-V ICE targets, select **Serial** as the monitor mode, specify the serial port and baud rate, and click the **Start Monitoring** button to establish the serial connection and view outputs from the target. Then, click the **Stop Monitoring** button to end the monitoring session.  
 
-For Andes RISC-V targets running on Andes QEMU, select **TCP** as the monitor mode, set **Host** to `localhost`, and enter the TCP port number corresponding to UART2 before clicking **Start Monitoring**. The UART2 TCP port number can be obtained from the first TCP port displayed in the QEMU target connection log (e.g., `9901` in the example below.) 
+For Andes RISC-V simulator targets (connected via Andes QEMU), select **TCP** as the monitor mode, set **Host** to `localhost`, and enter the TCP port number corresponding to UART2 before clicking **Start Monitoring**. The UART2 TCP port number can be obtained from the first TCP port displayed in the QEMU target connection log (e.g., `9901` in the example below.) 
  ![QEMU UART2 Port Number](./images/qemu_uart2_port.png) 
 

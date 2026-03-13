@@ -1,8 +1,8 @@
 The RVBuilder package provides two demo applications, `demo-plic-novector-V5` and `freertos-V5`, to demonstrate the development workflows with RVBuilder in VS Code. For detailed descriptions of their demo scenarios, see [**Demo Applications**](./using_rvbuilder.md#demo-applications). 
 
-The two demos are executed in a similar manner, but they use different approaches to manage build configuration and tasks.
+The two demos are executed in a similar manner, but they use different approaches to manage build and debug configurations.
 
-- The `demo-plic-novector-V5` project uses the RVBuilder-generated Makefile, allowing build and debug settings to be managed directly through the RVBuilder interface. 
+- The `demo-plic-novector-V5` project uses the RVBuilder-generated Makefile, allowing build and debug settings to be managed directly through the RVBuilder's [**Project Settings**](./project-connfig.md) interface. 
 - The `freertos-V5` project uses a custom Makefile and requires manual modification of the workspace configuration files (`tasks.json` and `launch.json`) for the build and debug process.
 
 The following sections use the two demo applications to illustrate the typical development workflows with RVBuilder.
@@ -25,9 +25,9 @@ The `demo-plic-novector-V5` project is used here to demonstrate the development 
 
 ### Run or Debug the Project 
 1. Right-click the project in the **Explorer** view and select "RVBuilder: Debug". 
-2. In the command palette, select the launch configuration for demo-plic-novector-V5. 
-3. The debug session starts. Use the **Debug toolbar** to control program execution. 
-4. Inspect the program runtime data, such as CPU register values and variable values, in the **Run and Debug** view. 
+2. In the command palette, select the launch configuration for `demo-plic-novector-V5`. 
+3. The debug session starts. Use the **Debug Toolbar** to control program execution. 
+4. Inspect the program runtime data and target status, such as variable values and CPU register values, in the **Run and Debug** view. 
 
 ## Development Workflow with Custom Makefile
 The `freertos-V5` project is used here to demonstrate the development workflow for projects that use a custom Makefile. Note that the project includes two standard FreeRTOS applications, **Full** and **Blinky**, and the **Full** demo is not supported on simulator targets. 
@@ -38,9 +38,9 @@ The `freertos-V5` project is used here to demonstrate the development workflow f
 3. On the opened dialog, select the `freertos-V5` project and click **Import**. 
 4. See the demo project in the **Explorer** view. 
 
-### Specify a FreeRTOS Demo (and Configure for SMP Target)
+### Specify a FreeRTOS Demo (and Configure for Targets with SMP Core)
 1. In the **Explorer** view, locate the directory `${PROJECT_ROOT}/Demo/[V5|V5-CLIC|V5-SMP]/RTOSDemo`. 
-2. Open `main.c` and search for the definition `mainSELECTED_APPLICATION`. Set its value to `0` to build the **Blinky** demo, or `1` to build the **Full** demo.  
+2. Open `main.c` in the directory and search for the definition `mainSELECTED_APPLICATION`. Set its value to `0` to build the **Blinky** demo, or `1` to build the **Full** demo.  
 3. (For SMP targets only) Open `FreeRTOSConfig.h` in the same directory and update the `configNUMBER_OF_CORES` value to match the number of cores on your SMP target. 
 
 ### Configure Build Settings in `tasks.json` 
@@ -53,19 +53,20 @@ The `freertos-V5` project is used here to demonstrate the development workflow f
     | `PLAT` | &bull; `AE350`: Specifies AE350 as the target platform.|
     | `USE_CACH` | &bull; `0`: disable the cache and its operation.<br>&bull; `CCTL`: Uses Andes CCTL extension when supported.<br>&bull; `CMO`: Uses RISC-V CMO extension when supported.|
     | `V` | &bull; `1`: Enables a verbose build.|
-    | `EXTRA_CFLAGS=-mcpu` & `EXTRA_LDFLAGS=-mcpu`<br> (Optional) | &bull; `ax65`: Enables AX65-related features in the toolchains.<br>&bull; `ax46`: Enables AX65-related features in the toolchains.<br>&bull; `a46`: Enables AX65-related features in the toolchains.<br>&bull; `d23`: Enables AX65-related features in the toolchains.<br>&bull; `n225`: Enables AX65-related features in the toolchains.|
+    | `EXTRA_CFLAGS=-mcpu` & `EXTRA_LDFLAGS=-mcpu`<br> (Optional) | &bull; `ax65`: Enables AX65-related features in the toolchains.<br>&bull; `ax46`: Enables AX46-related features in the toolchains.<br>&bull; `a46`: Enables A46-related features in the toolchains.<br>&bull; `d23`: Enables D23-related features in the toolchains.<br>&bull; `n225`: Enables N225-related features in the toolchains.|
     | `all` | Compiles all source files and generates the final output.|
 
-3. Search for `cwd` and set the build directory path to where the Makefile for your target locates, which is `${PROJECT_ROOT}/Demo/[V5|V5-CLIC|V5-SMP]/`.
+3. Search for `cwd` and set the path to the build directory, which is where the Makefile for your target locates (i.e., `${PROJECT_ROOT}/Demo/[V5|V5-CLIC|V5-SMP]/`).
 4. Update all toolchain executable paths in the file according to the toolchain to be used for your target. The path is 
-   - `{RVBUILDER_PACKAGE_ROOT}/toolchains/nds32le-elf-newlib-v5/bin/` for an Andes 32-bit processor, and
-   - `{RVBUILDER_PACKAGE_ROOT}/toolchains/nds64le-elf-newlib-v5/bin/` for an Andes RISC-V 64-bit processor. 
+
+     - `{RVBUILDER_PACKAGE_ROOT}/toolchains/nds32le-elf-newlib-v5/bin/` for Andes 32-bit RISC-V processors, and
+     - `{RVBUILDER_PACKAGE_ROOT}/toolchains/nds64le-elf-newlib-v5/bin/` for Andes 64-bit RISC-V processors. 
 
 ![FreeRTOS task.json](./images/freertos_task_config.png)
 
-### Configure Launch Settings in `launch.json` 
+### Configure Debug Settings in `launch.json` 
 1. Open `launch.json` under `${PROJECT_ROOT}/.vscode`.
-2. Search for `Program` and set the program executable path to `${workspacefolder}/Demo/[V5|V5-CLIC|V5-SMP]/Demo.elf`.
+2. Search for `program` and set the program executable path to `${workspacefolder}/Demo/[V5|V5-CLIC|V5-SMP]/Demo.elf`.
 3. (For SMP targets only) Add GDB command `thread apply all set $pc=_start` to the `setupCommands` section. 
 
 ![FreeRTOS launch.json](./images/freertos_launch_config.png)
@@ -78,7 +79,6 @@ The `freertos-V5` project is used here to demonstrate the development workflow f
 
 ### Run or Debug the Project 
 1. Right-click the project in the **Explorer** view and select "RVBuilder: Debug". 
-2. In the command palette, select the launch configuration for freertos-V5. 
-3. The debug session starts. Use the **Debug toolbar** to control program execution. 
-4. Inspect the program runtime data, such as CPU register values and variable values, in the **Run and Debug** view. 
-
+2. In the command palette, select the launch configuration for `freertos-V5`. 
+3. The debug session starts. Use the **Debug Toolbar** to control program execution. 
+4. Inspect the program runtime data and target status, such as variable values and CPU register values, in the **Run and Debug** view. 
