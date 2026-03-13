@@ -715,7 +715,7 @@
   <span class="md-ellipsis">
     
   
-    Demo Applications
+    Tutorials with Demo Applications
   
 
     
@@ -756,11 +756,11 @@
 <p>RVBuilder leverages VS Code’s native debugging capabilities, together with additional extensions, to provide comprehensive debug support for Andes RISC-V targets. Before you start a debug session, search and install the following extensions required for debugging in the <strong>Extensions</strong> view:</p>
 <ul>
 <li>
-<p><strong>Eclipse CDT Cloud Memory Inspector</strong>: For monitoring and modifying memory values.<br />
+<p><strong>Eclipse CDT Cloud Memory Inspector</strong>: For monitoring and modifying memory values.<br><br />
 <img alt="Memory Inspector Extension" src="../images/memory_inspector_extension.png" /></p>
 </li>
 <li>
-<p><strong>Serial Monitor</strong>: For viewing outputs from serial ports of Andes RISC-V targets. 
+<p><strong>Serial Monitor</strong>: For viewing outputs from serial ports.<br> 
    <img alt="Serial Monitor Extension" src="../images/serial_monitor_extension.png" /></p>
 </li>
 </ul>
@@ -782,11 +782,20 @@
 </ul>
 </li>
 <li>
-<p>The debug session starts. View debugging outputs from the <strong>Debug Console</strong> panel.
+<p>The debug session starts. </p>
+<ul>
+<li>
+<p>For ICE targets (AICE or Maverick targets), view debugging outputs from the <strong>Debug Console</strong> panel.
     <img alt="debug console" src="../images/debug_console.png" /></p>
 </li>
 <li>
-<p>Use the <strong>Debug toolbar</strong> to control the flow of the debug session, such as stepping through code or pausing execution. </p>
+<p>For simulator targets (Andes QEMU targets), view the output messages from a <strong>gdb-server</strong> terminal. 
+    <img alt="gdbserver terminal" src="../images/gdbserver-terminal.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Use the <strong>Debug Toolbar</strong> to control the flow of the debug session, such as stepping through code or pausing execution. </p>
 <p><img alt="debug toolbar" src="../images/debug_toolbar.png" /> </p>
 <p>The available debug actions from the toolbar include</p>
 <table>
@@ -799,7 +808,7 @@
 <tbody>
 <tr>
 <td>Continue/Pause</td>
-<td>Continue: Resume program execution.<br>Pause: Suspend program execution.</td>
+<td>&bull; Continue: Resume program execution.<br>&bull; Pause: Suspend program execution.</td>
 </tr>
 <tr>
 <td>Step Over</td>
@@ -819,7 +828,7 @@
 </tr>
 <tr>
 <td>Stop/Disconnect</td>
-<td>Stop: Terminate the current program execution.<br>Disconnect: Detach debugger from a core without changing the execution status (running/pause).</td>
+<td>&bull; Stop: Terminate the current program execution.<br>&bull; Disconnect: Detach debugger from a core without changing the execution status (running/pause).</td>
 </tr>
 </tbody>
 </table>
@@ -869,20 +878,20 @@
 <p>The <strong>Disassembly</strong> view displays the machine instructions for the selected stack frame or current program counter (PC). It shows the instruction address, the function symbol with offset, the opcode/decoded assembly mnemonic, and marks the current PC with a highlighted row. You can view disassembled instructions alongside source code and step through them for detailed program analysis. To open the view, right-click a stack frame in the <strong>Call Stack</strong> section and select "Open Disassembly View". </p>
 <p><img alt="Disassembly" src="../images/disassembly.png" /> </p>
 <h3 id="breakpoints">Breakpoints</h3>
-<p>The <strong>Breakpoint</strong> section displays all breakpoints set for the current project. You can manage breakpoints directly in this section by enabling, disabling, or removing them as needed.</p>
+<p>The <strong>Breakpoint</strong> section displays all breakpoints set in your code. You can manage breakpoints directly in this section by enabling, disabling, or removing them as needed.</p>
 <p><img alt="Breakpoint" src="../images/breakpoint.png" /> </p>
 <h3 id="rvbuilder-soc-registers">RVBuilder SoC Registers</h3>
-<p>The <strong>RVBuilder SoC Registers</strong> section displays the runtime status of System-on-a-Chip (SoC) registers for RVBuilder projects. These registers are organized hierarchically by peripheral, with each entry showing the base address, register offset, and current value. Bit fields are also decoded for easier inspection. SoC register values are updated in this section during debugging, enabling direct observation and verification of peripheral states.</p>
+<p>The <strong>RVBuilder SoC Registers</strong> section displays the runtime status of System-on-a-Chip (SoC) registers for RVBuilder projects. These registers are organized hierarchically by peripheral, with each entry showing the base address, register offset, and current value. Bit fields are also decoded for easier inspection. SoC register values are updated during debugging, allowing direct observation and verification of peripheral states.</p>
 <p><img alt="SoC Registers" src="../images/soc_registers.png" /> </p>
 <h3 id="memory-inspector">Memory Inspector</h3>
-<p>The <strong>Memory Inspector</strong> view is available after installing the <strong>Eclipse CDT Cloud Memory Inspector</strong> extension. It enables inspection of memory regions on a target in a debug session. It allows you to navigate to a specified memory address, view memory data in various formats, adjust display settings, and modify memory content if needed. </p>
+<p>The <strong>Memory Inspector</strong> view is available after installing the <strong>Eclipse CDT Cloud Memory Inspector</strong> extension. It enables inspection of memory regions on a target in a debug session. You can navigate to a specified memory address, view memory data in various formats, adjust display settings, and modify memory content if needed. </p>
 <p>To open the view, press F1 and run "Memory: Show Memory Inspector" from the command palette, or right-click a variable in the <strong>Variables</strong> section and select "Show in Memory Inspector".</p>
 <p><img alt="Memory Inspector" src="../images/memory_inspector.png" /> </p>
 <h3 id="serial-monitor">Serial Monitor</h3>
 <p>The <strong>Serial Monitor</strong> terminal is available after installing the <strong>Serial Monitor</strong> extension. It provides real-time monitoring of serial or TCP outputs from your application during execution.</p>
 <p><img alt="Serial Monitor" src="../images/serial_monitor.png" /> </p>
-<p>For Andes RISC-V targets connected through AICE/Maverick/GDB server, select <strong>Serial</strong> as the monitor mode, specify the serial port and baud rate, and click the <strong>Start Monitoring</strong> button to establish the serial connection and view outputs from the target. Then, click the <strong>Stop Monitoring</strong> button to end the monitoring session.  </p>
-<p>For Andes RISC-V targets running on Andes QEMU, select <strong>TCP</strong> as the monitor mode, set <strong>Host</strong> to <code>localhost</code>, and enter the TCP port number corresponding to UART2 before clicking <strong>Start Monitoring</strong>. The UART2 TCP port number can be obtained from the first TCP port displayed in the QEMU target connection log (e.g., <code>9901</code> in the example below.) 
+<p>For Andes RISC-V ICE targets, select <strong>Serial</strong> as the monitor mode, specify the serial port and baud rate, and click the <strong>Start Monitoring</strong> button to establish the serial connection and view outputs from the target. Then, click the <strong>Stop Monitoring</strong> button to end the monitoring session.  </p>
+<p>For Andes RISC-V simulator targets (connected via Andes QEMU), select <strong>TCP</strong> as the monitor mode, set <strong>Host</strong> to <code>localhost</code>, and enter the TCP port number corresponding to UART2 before clicking <strong>Start Monitoring</strong>. The UART2 TCP port number can be obtained from the first TCP port displayed in the QEMU target connection log (e.g., <code>9901</code> in the example below.) 
  <img alt="QEMU UART2 Port Number" src="../images/qemu_uart2_port.png" /> </p>
 
 

@@ -523,15 +523,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flash-burn-configuration" class="md-nav__link">
+  <a href="#flash-programming-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Flash Burn Configuration
+        Flash Programming Configuration
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Flash Burn Configuration">
+    <nav class="md-nav" aria-label="Flash Programming Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -621,7 +621,7 @@
   <span class="md-ellipsis">
     
   
-    Demo Applications
+    Tutorials with Demo Applications
   
 
     
@@ -656,23 +656,23 @@
 
   <h1>Flash an Application</h1>
 
-<p>For Andes RISC-V targets connected via AICE, Maverick, or GDB server, RVBuilder provides a graphical interface for programming application binaries into the target flash memory. </p>
+<p>For Andes RISC-V ICE targets connected via AICE or Maverick (locally or remotely), RVBuilder provides a dedicated graphical interface for programming application binaries into the target flash memory. </p>
 <h2 id="start-programming">Start Programming</h2>
 <p>To perform in-system programming using RVBuilder, proceed as follows:</p>
 <ol>
 <li>
-<p>In the <strong>Explorer</strong> view, right-click the project and select <strong>RVBuilder: Flash Burner</strong> on the drop-down menu. </p>
+<p>In the <strong>Explorer</strong> view, right-click the project and select "RVBuilder: Flash Burner" on the drop-down menu. </p>
 </li>
 <li>
-<p>In the opened <strong>Flash Burner</strong> settings UI, select the tab corresponding to your programming approach and configure the programming options. For supported in-system programming approaches by RVBuilder for Andes RISC-V targets, see <a href="../using_rvbuilder/#flash-burners"><strong>Flash Burner</strong></a>. </p>
+<p>In the opened <strong>Flash Burner</strong> settings UI, select the tab corresponding to your programming approach and configure the programming options. For details about the programming approaches supported by RVBuilder, see <a href="../using_rvbuilder/#flash-burners"><strong>Flash Burner</strong></a>. </p>
 </li>
 <li>
 <p>Click the <strong>Burn</strong> button in the upper-right corner to start flash programming.</p>
 </li>
 </ol>
 <p><img alt="Flash Burner UI" src="../images/flash_burner_UI.png" /></p>
-<h2 id="flash-burn-configuration">Flash Burn Configuration</h2>
-<p>The following describes the configuration options available in the <strong>Flash Burner</strong> UI for each programming approach in its corresonding tab. The RVBuilder package includes the flash burners and target applications required for the <strong>Flash Burn</strong> and <strong>Target Burn</strong> aproaches (see <a href="../using_rvbuilder/#flash-burners"><strong>Flash Burner</strong></a>). To use a self-defined flash burner, go to the <strong>Custom Burner</strong> tab and specify the burner and its related arguments. </p>
+<h2 id="flash-programming-configuration">Flash Programming Configuration</h2>
+<p>The following describes the configuration options available in the <strong>Flash Burner</strong> UI for each programming approach in its corresonding tab. The RVBuilder package includes the flash burners and target applications required for the <strong>Flash Burn</strong> and <strong>Target Burn</strong> approaches (see <a href="../using_rvbuilder/#flash-burners"><strong>Flash Burner</strong></a>). To use a self-defined flash burner, go to the <strong>Custom Burner</strong> tab. </p>
 <h3 id="flash-burn">Flash Burn</h3>
 <table>
 <thead>
@@ -692,11 +692,11 @@
 </tr>
 <tr>
 <td>Host</td>
-<td>Specifies the name of IP address of the remote host. Required only for Andes RISC-V targets connected via GDB.</td>
+<td>Specifies the name of IP address of the remote host. Required only for remote Andes RISC-V ICE targets connected via GDB server.</td>
 </tr>
 <tr>
 <td>Burner Port</td>
-<td>Specifies a socket port for the burner to connect. Required only for Andes RISC-V targets connected via GDB.</td>
+<td>Specifies a socket port for the burner to connect. Required only for remote Andes RISC-V ICE targets connected via GDB server.</td>
 </tr>
 <tr>
 <td>Unlock</td>
@@ -751,11 +751,11 @@
 </tr>
 <tr>
 <td>Host</td>
-<td>Specifies the name of IP address of the remote host. Required only for Andes RISC-V targets connected via GDB.</td>
+<td>Specifies the name of IP address of the remote host. Required only for remote Andes RISC-V ICE targets connected via GDB server.</td>
 </tr>
 <tr>
 <td>Telnet Port</td>
-<td>Specifies a socket port for the burner to connect. Required only for Andes RISC-V targets connected via GDB.</td>
+<td>Specifies a socket port for the burner to connect. Required only for remote Andes RISC-V ICE targets connected via GDB server.</td>
 </tr>
 <tr>
 <td>Unlock</td>
@@ -802,7 +802,7 @@
 </tr>
 <tr>
 <td>Misc Arguments</td>
-<td>Specifies the arguments for the flash burner.</td>
+<td>Specifies the arguments for the user burner.</td>
 </tr>
 </tbody>
 </table>

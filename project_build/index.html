@@ -593,7 +593,7 @@
   <span class="md-ellipsis">
     
   
-    Demo Applications
+    Tutorials with Demo Applications
   
 
     
@@ -657,10 +657,12 @@
 <p>The build process and result are displayed in the <strong>Terminal</strong> view. </p>
 <p><img alt="build output" src="../images/build_output_from_terminal.png" /></p>
 <h2 id="build-artifacts">Build Artifacts</h2>
-<p>For RVbuilder projects targeting a single-core Andes RISC-V target, the program executable (<code>.adx</code>) and object file are generated in <code>${PROJECT}/[Debug|Release]</code> and the binutil output (e.g., <code>.bin</code>) in <code>${PROJECT}/[Debug|Release]/output</code>. </p>
-<p>For projects targeting a multi-core Andes RISC-V target, the program executable (<code>.adx</code>) and object file are generated in <code>${PROJECT}/${CORE}/[Debug|Release]-${CORE}</code> and the binutil output (e.g., <code>.bin</code>) is in <code>${PROJECT}/${CORE}/[Debug|Release]-${CORE}/output</code>. </p>
-<p>The following shows build artifact locations for a Test project to be run on a single-core Andes RISC-V target. 
- <img alt="build artifact location" src="../images/build_artifact_location.png" /></p>
+<p>The build artifacts are generated in the following locations:</p>
+<ul>
+<li><strong>Program executable</strong> (<code>.adx</code>) and <strong>object files</strong>: <code>${PROJECT}/[Debug|Release]</code> </li>
+<li><strong>Binutil outputs</strong> (e.g. <code>.bin</code>): <code>${PROJECT}/[Debug|Release]/output</code>. </li>
+</ul>
+<p><img alt="build artifact location" src="../images/build_artifact_location.png" /></p>
 
 
 
