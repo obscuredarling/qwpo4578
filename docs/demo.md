@@ -2,7 +2,7 @@ The RVBuilder package provides two demo applications, `demo-plic-novector-V5` an
 
 The two demos are executed in a similar manner, but they use different approaches to manage build and debug configurations.
 
-- The `demo-plic-novector-V5` project uses the RVBuilder-generated Makefile, allowing build and debug settings to be managed directly through the RVBuilder's [**Project Settings**](./project-connfig.md) interface. 
+- The `demo-plic-novector-V5` project uses the RVBuilder-generated Makefile, allowing build and debug settings to be managed directly through the RVBuilder's [**Project Settings**](./project-config.md) interface. 
 - The `freertos-V5` project uses a custom Makefile and requires manual modification of the workspace configuration files (`tasks.json` and `launch.json`) for the build and debug process.
 
 The following sections use the two demo applications to illustrate the typical development workflows with RVBuilder.
