@@ -21,7 +21,7 @@ This section introduces the RVBuilder-specific interface and configuration file 
 
    RVBuilder enables a set of project operations through a project's drop-down menu or the **Explorer** view title menu to streamline the development workflow. 
 
-   ![RVBuilder Porject Menu Items](./images/RVBuilder_project_pulldown_menu.png)
+   ![RVBuilder Project Menu Items](./images/RVBuilder_project_pulldown_menu.png)
 
    ![RVBuilder Title Menu](./images/RVBuilder_toolbar.png)
 
