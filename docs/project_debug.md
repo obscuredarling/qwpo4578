@@ -72,7 +72,7 @@ Variable values in the section are updated automatically during debugging. You c
 
 The **Watch** section allows you to evaluate and watch variables and expressions. To watch a variable or expression, use either of the following methods:
  
-- Click the + icon in the title bar of the **Watch** section and enter the exression name. 
+- Click the + icon in the title bar of the **Watch** section and enter the expression name. 
 
 - Right-click a variable or expression in the code editor and select "Add to Watch". 
 

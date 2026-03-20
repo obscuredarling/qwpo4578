@@ -26,7 +26,7 @@ Note that Andes QEMU does not fully simulate all peripheral functions of Andes t
 This connection type connects to a real evaluation platform through an Andes ICE box. You can use the Andes ICE Management Software, ICEman, to control the ICE debugger during program execution. For a complete list of ICEman options and their usage, see [**Andes ICE Management Software (ICEman) User Manual**](./ref/Andes_ICE_Management_Software_UM067_V4.1.pdf).    
 
 
-### Maverick (Local ICE target connection)
+### Maverick (Local ICE Target Connection)
 This connection type connects to a real evaluation platform through a SEGGER J-Link using a custom implementation.
 
 Note that full compatibility with all SEGGER J-Link versions and features is not guaranteed in RVBuilder, as support may vary depending on the firmware version and updates.

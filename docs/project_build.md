@@ -32,7 +32,7 @@ The build process and result are displayed in the **Terminal** view.
 The build artifacts are generated in the following locations:
 
 - **Program executable** (`.adx`) and **object files**: `${PROJECT}/[Debug|Release]` 
-- **Binutil outputs** (e.g. `.bin`): `${PROJECT}/[Debug|Release]/output`. 
+- **Binutils outputs** (e.g. `.bin`): `${PROJECT}/[Debug|Release]/output`. 
 
 
  ![build artifact location](./images/build_artifact_location.png)

@@ -31,7 +31,7 @@ The following describes the configuration options available in the **Flash Burne
 | Verification | Verifies the result after programming. |
 | Erase All | Erases the entire flash segment to perform programming. |
 | Programming Start Address | Specifies the start address to be programmed. |
-| Flash Controller Address | Specifies the address of the flash address to be programmed.  |
+| Flash Controller Address | Specifies the address of the flash memory to be programmed.  |
 | Misc Arguments| Specifies additional arguments for the selected flash burner. |
 
 
