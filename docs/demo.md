@@ -21,7 +21,7 @@ The `demo-plic-novector-V5` project is used here to demonstrate the development 
 2. In the **Project Settings**, select a chip profile and a connection type that correspond to your target system and target environment.
 3. Ensure the option "Use RVBuilder-Generated Makefile" is checked and specify respective build settings as needed.  
 4. Click the **Build** button to build the application. 
-5. Verify the program executable `demo-plic-vector-V5.adx` is generated in the project. 
+5. Verify the program executable `demo-plic-novector-V5.adx` is generated in the project. 
 
 ### Run or Debug the Project 
 1. Right-click the project in the **Explorer** view and select "RVBuilder: Debug". 
@@ -51,7 +51,7 @@ The `freertos-V5` project is used here to demonstrate the development workflow f
     |---------------|-------------|
     | `COMPILER` | &bull; `riscv32`: Specifies the GCC compiler using a 32-bit toolchain.<br>&bull; `riscv64`: Specifies the GCC compiler using a 64-bit toolchain.<br>&bull; `riscv32-llvm`: Specifies the LLVM compiler using a 32-bit toolchain.<br>&bull; `riscv64-llvm`: Specifies the LLVM compiler using a 64-bit toolchain. |
     | `PLAT` | &bull; `AE350`: Specifies AE350 as the target platform.|
-    | `USE_CACH` | &bull; `0`: disable the cache and its operation.<br>&bull; `CCTL`: Uses Andes CCTL extension when supported.<br>&bull; `CMO`: Uses RISC-V CMO extension when supported.|
+    | `USE_CACHE` | &bull; `0`: disable the cache and its operation.<br>&bull; `CCTL`: Uses Andes CCTL extension when supported.<br>&bull; `CMO`: Uses RISC-V CMO extension when supported.|
     | `V` | &bull; `1`: Enables a verbose build.|
     | `EXTRA_CFLAGS=-mcpu` & `EXTRA_LDFLAGS=-mcpu`<br> (Optional) | &bull; `ax65`: Enables AX65-related features in the toolchains.<br>&bull; `ax46`: Enables AX46-related features in the toolchains.<br>&bull; `a46`: Enables A46-related features in the toolchains.<br>&bull; `d23`: Enables D23-related features in the toolchains.<br>&bull; `n225`: Enables N225-related features in the toolchains.|
     | `all` | Compiles all source files and generates the final output.|

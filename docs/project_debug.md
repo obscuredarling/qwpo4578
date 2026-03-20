@@ -1,4 +1,4 @@
-This section describes how to debug applications for Andes RISC-V targets using RVBuilder in VS Code. It covers the preparations for a debug session, how to initiate and control a debug session, and the views to inspect program state ahd target status during debugging. 
+This section describes how to debug applications for Andes RISC-V targets using RVBuilder in VS Code. It covers the preparations for a debug session, how to initiate and control a debug session, and the views to inspect program state and target status during debugging. 
 
 ## Before Debugging  
 ### Install Required Extensions 
@@ -47,7 +47,7 @@ Set breakpoints to pause program execution and inspect the application at specif
     | Restart | Terminate the current program execution and start debugging again using the current configuration. |
     | Stop/Disconnect | &bull; Stop: Terminate the current program execution.<br>&bull; Disconnect: Detach debugger from a core without changing the execution status (running/pause). |
 
-4. During debugging, examine runtime information such as program variables, CPU/pheripheral register values, and stack frames in the **Run and Debug** view. 
+4. During debugging, examine runtime information such as program variables, CPU/peripheral register values, and stack frames in the **Run and Debug** view. 
 
 ## Inspect Runtime Data
 In a debug session, you can monitor the real-time state of your application and target across various sections of the **Run and Debug** view and other debugger-related views.

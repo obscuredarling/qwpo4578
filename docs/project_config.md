@@ -1,5 +1,5 @@
 
-RVBuilder provides a graphical user interface (GUI) for configuring target and build settings for a project. The configuration interface can be opened by right-clicking the project in the **Explorer** view and selecting "RVBuilder: Build Project" from the drop-down menu.
+RVBuilder provides a graphical user interface (GUI) for configuring target and build settings for a project. The configuration interface can be opened by right-clicking the project in the **Explorer** view and selecting "RVBuilder: Settings" from the drop-down menu.
 
 
 ## Target Configuration

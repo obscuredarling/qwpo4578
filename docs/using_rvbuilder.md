@@ -50,7 +50,7 @@ Note that a toolchain change is typically caused by a change in the selected chi
 ![Toolchain Path](./images/toolchain_path_in_tasks_file.png)
 
 
-### Debug Configuraton File `launch.json`
+### Debug Configuration File `launch.json`
 
 ![launch.json](./images/launch_json.png)
 
@@ -60,7 +60,8 @@ Most workspace settings in `launch.json` are generated automatically for Andes R
 - the `connection` type is aligned with the connection selected in the project settings. 
 - the `program` path is set to the program executable under `${PROJECT_ROOT}/Debug/`.
 - the `loadMemoryMap` option is set to `true`, which loads the program executable according to the memory regions defined in the selected chip profile. To load the program executable without applying the predefined memory mapping, set this option to `false`.
-    
+  
+
 To further customize debugger behavior, use the following options:
 
 - `stopAtEntry` controls whether to halt execution at the program entry point when the debug session starts.
