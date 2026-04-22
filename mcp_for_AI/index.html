@@ -319,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation.md" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         
   
   
@@ -770,7 +770,7 @@
 
   <h1>Use RVBuilder with AI Agents</h1>
 
-<p>RVBuilder provides Model Context Protocol (MCP) servers that enable AI agents to streamline Andes RISC-V project setup, improve configuration accuracy, automate development workflows, or assist in resolving development issues. The level of control available to AI agents depends on how the MCP servers are integrated. As shown below, AI agents such as GitHub Copilot , which directly interact with the MCP server integrated in RVBuilder, provides a higher level of automation across the development workflow. In contrast, AI agents that communicate with the MCP server via standard input/output (STDIO), such as Codex or Claude Code, offer comparatively limited automation and primarily assist with project configuration and development queries.  </p>
+<p>RVBuilder provides Model Context Protocol (MCP) servers that enable AI agents to streamline Andes RISC-V project setup, improve configuration accuracy, automate development workflows, or assist in resolving development issues. The level of control available to AI agents depends on how the MCP servers are integrated. As shown below, AI agents such as GitHub Copilot, which directly interact with the MCP server integrated in RVBuilder, provides a higher level of automation across development workflow. In contrast, AI agents that communicate with the MCP server via standard input/output (STDIO), such as Codex or Claude Code, offer comparatively limited automation and primarily assist with project configuration and development queries.  </p>
 <table>
 <thead>
 <tr>
@@ -789,13 +789,13 @@
 </tr>
 <tr>
 <td>Codex Desktop/CLI</td>
-<td>Standalone (STDIO via MCP server) from RVBuilder MCP package</td>
+<td>Standalone (STDIO via MCP server)</td>
 <td>Assistance with project configuration and development queries</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Claude Code Desktop/CLI</td>
-<td>Standalone (STDIO via MCP server) from RVBuilder MCP package</td>
+<td>Standalone (STDIO via MCP server)</td>
 <td>Assistance with project configuration and development queries</td>
 <td>No</td>
 </tr>
@@ -805,7 +805,7 @@
 <h2 id="github-copilot-chat">GitHub Copilot Chat</h2>
 <h3 id="prerequisites">Prerequisites</h3>
 <ul>
-<li>Visual Studio Code (version 1.9 or later) with the RVBuilder extension installed. For installation instructions of the RVBuilder extension, see <a href="./installation.md"><strong>Install RVBuilder</strong></a>.</li>
+<li>Visual Studio Code (version 1.9 or later) with the RVBuilder extension installed. For installation instructions of the RVBuilder extension, see <a href="../installation/"><strong>Install RVBuilder</strong></a>.</li>
 <li>A GitHub account with an active Copilot subscription or a Copilot free plan</li>
 </ul>
 <h3 id="installation-and-setup">Installation and Setup</h3>
@@ -821,21 +821,23 @@
 <li>
 <p>Call <code>@rvbuilder</code> followed by your request or question for RVbuilder project development. GitHub Copilot supports automation for project creation/import, configuration, building, and debugging. For example, </p>
 <ul>
-<li>Request to import a project   </li>
+<li>
+<p>Request to import a project <br />
+<code>@rvbuilder Import a demo from the RVbuilder package to the workspace</code></p>
+</li>
+<li>
+<p>Query about project configuration  <br />
+<code>@rvbuilder Read the build settings of the project</code></p>
+</li>
+<li>
+<p>Request to modify project settings <br />
+<code>@rvbuilder Configure the project to improve performance</code></p>
+</li>
+<li>
+<p>Request to build and debug the project  <br />
+<code>@rvbuilder Start debugging and show CPU register values after the program suspends</code></p>
+</li>
 </ul>
-<p><code>@rvbuilder Import a demo from the RVbuilder package to the workspace</code></p>
-<ul>
-<li>Query about the project configuration    </li>
-</ul>
-<p><code>@rvbuilder Read the build settings of the project</code></p>
-<ul>
-<li>Request to modify project settings   </li>
-</ul>
-<p><code>@rvbuilder Configure the project to improve performance</code></p>
-<ul>
-<li>Request to build and debug the project    </li>
-</ul>
-<p><code>@rvbuilder Start debugging and show CPU register values after the program suspends</code></p>
 </li>
 </ol>
 <h2 id="codex-desktopcli">Codex Desktop/CLI</h2>
@@ -869,33 +871,35 @@
 </ol>
 <h3 id="using-codex-for-rvbuilder-development">Using Codex for RVBuilder Development</h3>
 <ol>
-<li>Open Codex Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).</li>
-<li>In the Codex Desktop app, select the project folder.</li>
 <li>
-<p>In the Codex CLI, change the working directory to the project folder. </p>
+<p>Open Codex Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).</p>
+<ul>
+<li>In the Codex Desktop app, select the project folder.</li>
+<li>In the Codex CLI, change the working directory to the project folder. </li>
+</ul>
 </li>
 <li>
-<p>Copy <code>AGENTS.md</code> from the extracted MCP package to the working project directory. For example,<br>
+<p>Copy <code>AGENTS.md</code> from the extracted RVBuilder MCP package to the working project directory. For example,<br>
     <code>cp D:/mcp-package/AGENTS.md D:/my-project/</code> </p>
 </li>
 <li>
-<p>Configure Codex to use the standalone RVBuilder MCP server by editing the user config <code>~/.codex/config.toml</code> and adding a section as follows: 
+<p>Edit the user config <code>~/.codex/config.toml</code> and add a section as follows to configure Codex to use the standalone MCP server from the extracted RVBuilderMCP package:
     <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[mcp_servers.rvbuilder]
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>command = &quot;node&quot;
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>args = [&quot;D:/mcp-package/dist/mcp-server.js&quot;]
 </span></code></pre></div></p>
-<p>For Codex Desktop app, you can alternatively configure the MCP server in "Settings &gt; MCP servers". Add an RVBuilder MCP server and set its path to the standalone MCP server in the extracted RVBuilder MCP package. <br> </p>
+<p>For Codex Desktop app, you can alternatively configure the MCP server in "Settings &gt; MCP servers". Add an RVBuilder MCP server and set its path to the standalone RVBuilder MCP server. <br> </p>
 <p>Restart the Codex Desktop app or CLI after the configuration. <br></p>
 </li>
 <li>
 <p>Use Codex to assist with RVBuilder project development. Codex primarily supports project configuration tasks and provides guidance for development queries.</p>
-</li>
-<li>
-<p>In the Codex Desktop app, enter your request or question in the prompt box.</p>
-</li>
+<ul>
+<li>In the Codex Desktop app, enter your request or question in the prompt box.</li>
 <li>In the Codex CLI, run <code>codex</code> followed by your request or requests. For example,<br><ul>
-<li><code>Codex List the current compiler and linker options for the project.</code> </li>
-<li><code>Codex Change the compiler from GCC to Clang.</code></li>
+<li><code>codex List the current compiler and linker options for the project.</code> </li>
+<li><code>codex Change the compiler from GCC to Clang.</code></li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
@@ -924,20 +928,21 @@
 </li>
 <li>
 <p>Install the Claude Code globally. </p>
+<p><code>npm install -g @anthropic-ai/claude-code</code> <br></p>
+<p>To use the Claude Code Desktop app, download and install it from the <a href="https://claude.ai/downloads"><strong>Claude Download</strong></a> page.</p>
 </li>
 </ol>
-<p><code>npm install -g @anthropic-ai/claude-code</code> </p>
-<div class="language-text highlight"><pre><span></span><code>To use the Claude Code Desktop app, download and install it from the [**Claude Download**](https://claude.ai/downloads) page then.
-</code></pre></div>
 <h3 id="using-claude-code-for-rvbuilder-development">Using Claude Code for RVBuilder Development</h3>
 <ol>
-<li>Open Claude Code Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).</li>
-<li>In the Claude Code Desktop app, select the project folder.</li>
 <li>
-<p>In the Claude Code CLI, change the working directory to the project folder. </p>
+<p>Open Claude Code Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).</p>
+<ul>
+<li>In the Claude Code Desktop app, select the project folder.</li>
+<li>In the Claude Code CLI, change the working directory to the project folder. </li>
+</ul>
 </li>
 <li>
-<p>Copy <code>CLAUDE.md</code> from the extracted MCP package to the working project directory. For example,<br>
+<p>Copy <code>CLAUDE.md</code> from the extracted RVBuilder MCP package to the working project directory. For example,<br>
     <code>copy D:/mcp-package/CLAUDE.md D:/my-project/</code> </p>
 </li>
 <li>
@@ -945,15 +950,15 @@
     <code>claude mcp add -s local rvbuilder node "D:/mcp-package/dist/mcp-server.js"</code></p>
 </li>
 <li>
-<p>Use Claude Code to assist with your RVBuilder development. Claude Code primarily supports project configuration tasks and provides guidance for development queries.</p>
-</li>
-<li>
-<p>In the Claude Code Desktop app, enter your request or question in the prompt box.</p>
-</li>
+<p>Use Claude Code to assist with RVBuilder project development. Claude Code primarily supports project configuration tasks and provides guidance for development queries.</p>
+<ul>
+<li>In the Claude Code Desktop app, enter your request or question in the prompt box.</li>
 <li>In the Claude Code CLI, run <code>claude</code> followed by your request or requests. For example,<br><ul>
-<li><code>Claude Change the project target to ADP-AE350-A45 and update build settings</code> <br></li>
-<li><code>Claude Enable DSP for my project</code></li>
-<li><code>Claude What are the issues that might cause build failures?</code></li>
+<li><code>claude Change the project target to ADP-AE350-A45 and update build settings</code> <br></li>
+<li><code>claude Enable DSP for my project</code><br></li>
+<li><code>claude What are the issues that might cause build failures?</code></li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
