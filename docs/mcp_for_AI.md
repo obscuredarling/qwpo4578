@@ -86,9 +86,9 @@ This section outlines the requirements, installation, configuration, and usage o
 4. Use Codex to assist with RVBuilder project development. Codex primarily supports project configuration tasks and provides guidance for development queries.
 
     - In the Codex Desktop app, enter your request or question in the prompt box.
-    - In the Codex CLI, run `codex` followed by your request or requests. For example,<br>
-        - ``codex List the current compiler and linker options for the project.`` 
-        - ``codex Change the compiler from GCC to Clang.``
+    - In the Codex CLI, run `codex` followed by your request or question. For example,<br>
+        - <code>codex</code> ``List the current compiler and linker options for the project.`` 
+        - <code>codex</code> ``Change the compiler from GCC to Clang.``
      
 
 
@@ -135,8 +135,8 @@ This section outlines the requirements, installation, configuration, and usage o
 4. Use Claude Code to assist with RVBuilder project development. Claude Code primarily supports project configuration tasks and provides guidance for development queries.
 
     - In the Claude Code Desktop app, enter your request or question in the prompt box.
-    - In the Claude Code CLI, run `claude` followed by your request or requests. For example,<br>
-        - ``claude Change the project target to ADP-AE350-A45 and update build settings`` <br>
-        - ``claude Enable DSP for my project``<br>
-        - ``claude What are the issues that might cause build failures?``
+    - In the Claude Code CLI, run `claude` followed by your request or question. For example,<br>
+        - <code>claude</code> ``Change the project target to ADP-AE350-A45 and update build settings`` <br>
+        - <code>claude</code> ``Enable DSP for my project``<br>
+        - <code>claude</code> ``What are the issues that might cause build failures?``
 
