@@ -31,3 +31,6 @@ RVBuilder is an integrated development environment that provides essential compo
   
     Provide pre-configured demo projects for verifying development environment and demonstrating typical development workflows.
 
+- **AI Agent Support with MCP Servers**
+  
+    Supports AI agents through MCP servers, enabling assistance with development queries and different levels of automation based on MCP integration mode.

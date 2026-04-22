@@ -1,8 +1,8 @@
 site_name: RVBuilder Documentation
-site_url: https://andestech.github.io/RVBuilder/
+site_url: https://obscuredarling.github.io/qwpo4578/
 
 repo_name: RVBuilder Doc Repo  
-repo_url: https://github.com/andestech/RVBuilder
+repo_url: https://github.com/obscuredarling/qwpo4578 
 edit_uri: edit/main/docs/ 
 
 theme: 
@@ -61,5 +61,6 @@ nav:
     - Flash an Application: project_flash.md
     - Debug an Application: project_debug.md
     - Tutorials with Demo Applications: demo.md
+    - Use RVBuilder with AI Agents: mcp_for_AI.md 
 
 
