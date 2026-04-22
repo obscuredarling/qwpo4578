@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://obscuredarling.github.io/qwpo4578/project_create/">
+        <link rel="canonical" href="https://obscuredarling.github.io/qwpo4578/Installation/">
       
       
-        <link rel="prev" href="../using_rvbuilder/">
-      
-      
-        <link rel="next" href="../project_config/">
       
       
         
@@ -25,7 +21,7 @@
     
     
       
-        <title>Create a Project - RVBuilder Documentation</title>
+        <title>Installation - RVBuilder Documentation</title>
       
     
     
@@ -76,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#start-a-new-rvbuilder-project" class="md-skip">
+        <a href="#requirements" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create a Project
+              Installation
             
           </span>
         </div>
@@ -372,35 +368,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Create a Project
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../project_create/" class="md-nav__link">
         
   
   
@@ -416,46 +387,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#start-a-new-rvbuilder-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Start a New RVBuilder Project
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-rvbuilder-settings-to-an-existing-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Add RVBuilder Settings to an Existing Project
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -642,43 +573,65 @@
   
 
 
-  <h1>Create a Project</h1>
+  <h1>Installation</h1>
 
-<h2 id="start-a-new-rvbuilder-project">Start a New RVBuilder Project</h2>
+<p>This section outlines the system requirements, installation instructions for the RVBuilder extension in Visual Studio Code, and the extension configuration. </p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><strong>Operating System</strong>: Windows or Linux</li>
+<li><strong>Software</strong>: Visual Studio Code (version 1.82 or later) from <a href="https://code.visualstudio.com/download"><strong>Microsoft Visual Studio Code</strong></a></li>
+</ul>
+<h2 id="rvbuilder-installation">RVBuilder Installation</h2>
 <ol>
-<li>In Visual Studio Code, click <img alt="RVBuilder icon" src="../images/RVBuilder_icon.png" /> to open the <strong>RVBuilder</strong> view and click <strong>Home</strong>. </li>
-<li>On the RVBuilder <strong>Home</strong> page, click <strong>New Project</strong>. </li>
+<li>Download the RVBuilder extension package <code>rvbuilder-1.0.0.vsix</code> from the <a href="https://github.com/andestech/RVBuilder/releases/tag/v1.0.0"><strong>RVBuilder latest release page</strong></a>.  </li>
+<li>In Visual Studio Code, click <img alt="Extension" src="../images/extension.png" /> in the <strong>Activity Bar</strong>. </li>
+<li>In the <strong>Extensions</strong> view, click the <strong>More Actions</strong> icon <img alt="dots" src="../images/dots.png" /> in the top-right corner, select "Install from VSIX…" from the drop-down menu, and then choose the downloaded file <code>rvbuilder-1.0.0.vsix</code> to start the installation. </li>
 <li>
-<p>On the <strong>New Project</strong> dialog, enter a project name, specify a programming language (C or C++), a desired Andes RISC-V target and a project type, and then click <strong>Browse</strong> to specify a project workspace location.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Andes RISC-V targets are defined by chip profiles. For more about chip profiles in the RVBuilder package, see <a href="../using_rvbuilder/#chip-profiles"><strong>Chip Profiles</strong></a>.</p>
-</div>
-</li>
-<li>
-<p>Click <strong>Create</strong> to complete the project creation.</p>
+<p>A prompt pops up notifying the completion of installation. <br>
+    <img alt="RVBuilder install complete" src="./images/RVBuilder_install_finish.png" /><br></p>
+<p>RVBuilder is listed among the installed extensions in the <strong>Extensions</strong> view and the <strong>RVBuilder</strong> icon <img alt="RVBuilder icon" src="../images/RVBuilder_icon.png" /> is displayed in the <strong>Activity Bar</strong>. These indicate that the installation was successful.<br>
+<img alt="RVBuilder install verification" src="../images/RVBuilder_install_verify.png" /></p>
 </li>
 </ol>
-<p><img alt="RVBuilder project creation" src="../images/project_create.png" /></p>
-<h2 id="add-rvbuilder-settings-to-an-existing-project">Add RVBuilder Settings to an Existing Project</h2>
-<p>For an existing project created in a non-RVBuilder environment, you can enable it to have RVBuilder settings and features to streamline development on Andes RISC-V targets. Proceed as follows:</p>
-<ol>
+<hr />
+<p><strong>Note</strong></p>
+<ul>
 <li>
-<p>In the <strong>Explorer</strong> view, add an existing project folder to the current workspace. </p>
+<p>To reinstall or update the RVBuilder extension, uninstall the existing extension before proceeding. After reinstallation, restart VS Code to apply the changes. </p>
+<p><img alt="RVBuilder Uninstall" src="../images/RVBuilder_uninstall.png" /></p>
 </li>
 <li>
-<p>Right-click the project folder and select any <a href="../using_rvbuilder/#4-rvbuilder-project-action-items">RVBuilder project action item</a> — except "RVBuilder: Delete Project" — from either the project drop-down menu or the <strong>Explorer</strong> view title menu.</p>
-<p>For example, select an existing "hello" project and click the <strong>RVBuilder: Settings</strong> button on the <strong>Explorer</strong> view title menu.
-<img alt="Add RVBuilder Settings" src="../images/add_rvbuilder_setting.png" /></p>
+<p>On Linux, a system password is required to grant RVBuilder permissions. After RVBuilder installation, follow the on-screen prompt to click <strong>Run</strong> and enter your system password.</p>
+<p><img alt="Notification for Linux installation" src="../images/notify_for_linux_install.png" />
+<img alt="Linux installation password" src="../images/linux_install_pw.png" /></p>
 </li>
-<li>
-<p>A notification dialog appears indicating that the project is not yet configured for development with RVBuilder. Click <strong>Yes</strong> to add the RVBuilder settings to the project.</p>
-<p><img alt="RVBuilder Settings Notification" src="../images/add_rvbuilder_setting_notify.png" /></p>
-</li>
-<li>
-<p>The project is now configured as an RVBuilder project. RVBuilder features such as build, debug, and flash operations dedicated to development with Andes RISC-V targets are enabled, and the project is ready for development using the RVBuilder workflow.</p>
-</li>
-</ol>
+</ul>
+<hr />
+<h2 id="extension-configuration">Extension Configuration</h2>
+<p>Click <img alt="Setting wheel" src="../images/setting_wheel.png" /> at the bottom of the <strong>Activity Bar</strong> and select "Settings". Under the <strong>User</strong> tab, select <strong>Extensions &gt; RVBuilder</strong> in the navigation pane to view the available RVBuilder extension settings and modify them if necessary. </p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home Page</td>
+<td>Controls whether the RVBuilder Home page is displayed when the VS Code starts.</td>
+</tr>
+<tr>
+<td>Package Root</td>
+<td>Specifies the installation destination of the RVBuilder package.</td>
+</tr>
+<tr>
+<td>Project Workspace</td>
+<td>Specifies the path to the project workspace.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="RVBuilder Settings" src="../images/RVBuilder_settings.png" /></p>
 
 
 
