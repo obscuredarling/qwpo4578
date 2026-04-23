@@ -79,15 +79,19 @@ This section outlines the requirements, installation, configuration, and usage o
 3. Install the Codex Desktop app from the [**OpenAI Codex App**](https://openai.com/zh-Hant/codex/) page or install the Codex CLI using: <br>
    ``npm install -g @openai/codex``
 
-4. Set up the RVBuilder system prompt for Codex. <br>
-    - If a global `AGENTS.md` does not exist in `$HOME/.codex/`, copy `AGENTS.md` from the extracted RVBuilder MCP package to the user Codex directory. <br>
+4. Set up the RVBuilder system prompt for Codex. 
+    - If a global `AGENTS.md` does not exist in `$HOME/.codex/`, copy `AGENTS.md` from the extracted RVBuilder MCP package to the user Codex directory. 
+
         ```powershell
         # Powershell
         Copy-Item D:/rvbuilder-mcp/AGENTS.md -Destination $HOME/.codex/AGENTS.md 
-    - If a global `AGENTS.md` already exists in `$HOME/.codex/`, append the RVBuilder system prompt to the existing file. <br>
+        ```
+    - If a global `AGENTS.md` already exists in `$HOME/.codex/`, append the RVBuilder system prompt to the existing file. 
+
         ```powershell
         # Powershell
         Get-Content D:/rvbuilder-mcp/AGENTS.md | Add-Content $HOME/.codex/AGENTS.md 
+        ```
 
 5. Edit the user configuration file `$HOME/.codex/config.toml` and add a section as follows to configure Codex to use the standalone MCP server from the extracted RVBuilderMCP package:
     ```
@@ -147,12 +151,12 @@ This section outlines the requirements, installation, configuration, and usage o
        ```powershell
        # Powershell
        Copy-Item D:/rvbuilder-mcp/CLAUDE.md -Destination $HOME/.claude/CLAUDE.md 
-
+       ```
     - If a global `CLAUDE.md` exists in `$HOME/.claude/`, append the RVBuilder system prompt to the existing file. <br>
        ```powershell
        # Powershell
-       ``Get-Content D:/rvbuilder-mcp/CLAUDE.md | Add-Content $HOME/.claude/CLAUDE.md`` 
-
+       Get-Content D:/rvbuilder-mcp/CLAUDE.md | Add-Content $HOME/.claude/CLAUDE.md 
+       ```
 
 ### RVBuilder Development with Claude Code 
 
@@ -164,7 +168,7 @@ This section outlines the requirements, installation, configuration, and usage o
     ```powershell
     # Powershell
     claude mcp add -s local rvbuilder node "D:/rvbuilder-mcp/dist/mcp-server.js"
-
+    ```
 4. Use Claude Code to assist with RVBuilder project development. Claude Code primarily supports project configuration tasks and provides guidance for development queries.
 
     - In the Claude Code Desktop app, enter your request or question in the prompt box.
