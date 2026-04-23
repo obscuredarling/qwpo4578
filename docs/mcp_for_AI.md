@@ -35,7 +35,7 @@ This section outlines the requirements, installation, configuration, and usage o
  ![GitHub Copilot Chat extension](./images/github_copilot_chat.png)
 3. Open the **Chat** view (pressing Ctrl+Alt+I or clicking the **Toggle Chat** icon ![Toggle chat](./images/toggle_chat.png) near the search bar). Follow the prompts to sign in with your GitHub account and authorize VS Code in the browser.  
 
-### Using GitHub Copilot Chat for RVBuilder Development
+### RVBuilder Development with GitHub Copilot Chat
 1. Open the **Chat** view in the VS Code with the RVBuilder extension installed. 
 2. Call `@rvbuilder` followed by your request or question for RVbuilder project development. GitHub Copilot supports automation for project creation/import, configuration, building, and debugging. For example, 
 
@@ -81,9 +81,13 @@ This section outlines the requirements, installation, configuration, and usage o
 
 4. Set up the RVBuilder system prompt for Codex. <br>
     - If a global `AGENTS.md` does not exist in `$HOME/.codex/`, copy `AGENTS.md` from the extracted RVBuilder MCP package to the user Codex directory. <br>
-       ``Copy-Item D:/rvbuilder-mcp/AGENTS.md -Destination $HOME/.codex/AGENTS.md`` 
+        ```powershell
+        # Powershell
+        Copy-Item D:/rvbuilder-mcp/AGENTS.md -Destination $HOME/.codex/AGENTS.md 
     - If a global `AGENTS.md` already exists in `$HOME/.codex/`, append the RVBuilder system prompt to the existing file. <br>
-       ``Get-Content D:/rvbuilder-mcp/AGENTS.md | Add-Content $HOME/.codex/AGENTS.md`` 
+        ```powershell
+        # Powershell
+        Get-Content D:/rvbuilder-mcp/AGENTS.md | Add-Content $HOME/.codex/AGENTS.md 
 
 5. Edit the user configuration file `$HOME/.codex/config.toml` and add a section as follows to configure Codex to use the standalone MCP server from the extracted RVBuilderMCP package:
     ```
@@ -96,7 +100,7 @@ This section outlines the requirements, installation, configuration, and usage o
 
     Restart the Codex Desktop app or CLI after the configuration. <br>
 
-### Using Codex for RVBuilder Development
+### RVBuilder Development with Codex 
 1. Open Codex Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).
      - In the Codex Desktop app, select the project folder.
      - In the Codex CLI, change the working directory to the project folder. 
@@ -140,19 +144,26 @@ This section outlines the requirements, installation, configuration, and usage o
 
 4. Set up the RVBuilder system prompt for Claude Code.<br>
     - If a global `CLAUDE.md` does not exist, copy `CLAUDE.md` from the extracted RVBuilder MCP package to the user Claude directory. <br>
-       ``Copy-Item D:/rvbuilder-mcp/CLAUDE.md -Destination $HOME/.claude/CLAUDE.md`` 
+       ```powershell
+       # Powershell
+       Copy-Item D:/rvbuilder-mcp/CLAUDE.md -Destination $HOME/.claude/CLAUDE.md 
+
     - If a global `CLAUDE.md` exists in `$HOME/.claude/`, append the RVBuilder system prompt to the existing file. <br>
+       ```powershell
+       # Powershell
        ``Get-Content D:/rvbuilder-mcp/CLAUDE.md | Add-Content $HOME/.claude/CLAUDE.md`` 
 
 
-### Using Claude Code for RVBuilder Development
+### RVBuilder Development with Claude Code 
 
 1. Open Claude Code Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).
     - In the Claude Code Desktop app, select the project folder.
     - In the Claude Code CLI, change the working directory to the project folder. 
 
 2. Register the standalone MCP server in the extracted RVBuilder MCP package for the project.<br>
-    ``claude mcp add -s local rvbuilder node "D:/rvbuilder-mcp/dist/mcp-server.js"``
+    ```powershell
+    # Powershell
+    claude mcp add -s local rvbuilder node "D:/rvbuilder-mcp/dist/mcp-server.js"
 
 4. Use Claude Code to assist with RVBuilder project development. Claude Code primarily supports project configuration tasks and provides guidance for development queries.
 
