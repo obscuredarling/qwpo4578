@@ -109,7 +109,7 @@ This section outlines the requirements, installation, configuration, and usage o
 
     ```powershell
     # Powershell
-    cd D:\my-project
+    cd D:/my-project
     ```
 
 2. Run `codex` followed by your request or question. Codex primarily supports project configuration tasks and provides guidance for development queries. For example,<br>
@@ -162,7 +162,7 @@ This section outlines the requirements, installation, configuration, and usage o
 
     ```powershell
     # Powershell
-    cd D:\my-project
+    cd D:/my-project
     ```
 
 2. Register the standalone MCP server in the extracted RVBuilder MCP package for the project.<br>
