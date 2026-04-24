@@ -112,7 +112,7 @@ This section outlines the requirements, installation, configuration, and usage o
     cd D:\my-project
     ```
 
-2. Run `codex` followed by your request or question to enable Codex to assist with RVBuilder project development. Codex primarily supports project configuration tasks and provides guidance for development queries. For example,<br>
+2. Run `codex` followed by your request or question. Codex primarily supports project configuration tasks and provides guidance for development queries. For example,<br>
         - <code>codex</code> ``List the current compiler and linker options for the project.`` <br>
         - <code>codex</code> ``Change the compiler from GCC to Clang.``
      
@@ -170,7 +170,7 @@ This section outlines the requirements, installation, configuration, and usage o
     # Powershell
     claude mcp add -s local rvbuilder node "D:/rvbuilder-mcp/dist/mcp-server.js"
     ```
-4. Run `claude` followed by your request or question to enable Claude Code to assist with RVBuilder project development. Claude Code primarily supports project configuration tasks and provides guidance for development queries. For example,<br>
+4. Run `claude` followed by your request or question. Claude Code primarily supports project configuration tasks and provides guidance for development queries. For example,<br>
         - <code>claude</code> ``Change the project target to ADP-AE350-A45 and update build settings`` <br>
         - <code>claude</code> ``Enable DSP for my project``<br>
         - <code>claude</code> ``What are the issues that might cause build failures?``
