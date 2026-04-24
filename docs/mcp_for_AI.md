@@ -21,7 +21,7 @@ The level of control available to AI agents depends on how the MCP servers are i
 | Codex Desktop/CLI | Standalone (STDIO via MCP server) |  Assistance with project configuration and development queries | No |
 | Claude Code Desktop/CLI | Standalone (STDIO via MCP server) |  Assistance with project configuration and development queries | No |
 
-This section outlines the requirements, installation, configuration, and usage of GitHub Copilot, Codex Desktop/CLI, and Claude Code Desktop/CLI for RVBuilder project development. Note that while RVBuilder workflows support both Linux and Windows environments, the  instructions below use Windows and PowerShell as examples.
+This section outlines the requirements, installation, configuration, and usage of GitHub Copilot, Codex Desktop/CLI, and Claude Code Desktop/CLI for RVBuilder project development. Note that while RVBuilder workflows support both Linux and Windows environments, the instructions for Codex/Claude Code-assisted worflows below primarily use a Windows environment with PowerShell and AI CLI as examples.
 
 ## GitHub Copilot Chat 
 
@@ -53,7 +53,7 @@ This section outlines the requirements, installation, configuration, and usage o
         ``@rvbuilder Start debugging and show CPU register values after the program suspends``
 
 
-## Codex Desktop/CLI 
+## Codex 
 ### Requirements
 - Codex Desktop (version 26.421.11020 or later) or Codex CLI (version 0.122.0 or later)
 - `Node.js` (version 18 or later)
@@ -77,7 +77,7 @@ This section outlines the requirements, installation, configuration, and usage o
     ``node -v`` <br>
     ``npm -v``
     
-3. Install the Codex Desktop app from the [**OpenAI Codex App**](https://openai.com/zh-Hant/codex/) page or install the Codex CLI using: <br>
+3. Install the Codex CLI using: <br>
    ``npm install -g @openai/codex``
 
 4. Set up the RVBuilder system prompt for Codex. 
@@ -102,24 +102,22 @@ This section outlines the requirements, installation, configuration, and usage o
     args = ["D:/rvbuilder-mcp/dist/mcp-server.js"]
     ```
 
-    For Codex Desktop app, you can alternatively configure the MCP server in "Settings > MCP servers". Add an RVBuilder MCP server and set its path to the standalone RVBuilder MCP server. <br> 
+    Restart the Codex CLI after the configuration. <br>
 
-    Restart the Codex Desktop app or CLI after the configuration. <br>
+### RVBuilder Development with Codex CLI
+1. Change the working directory to the desired RVBuilder project (e.g., D:/my-project).
 
-### RVBuilder Development with Codex 
-1. Open Codex Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).
-     - In the Codex Desktop app, select the project folder.
-     - In the Codex CLI, change the working directory to the project folder. 
+    ```powershell
+    # Powershell
+    cd D:\my-project
+    ```
 
-2. Use Codex to assist with RVBuilder project development. Codex primarily supports project configuration tasks and provides guidance for development queries.
-
-    - In the Codex Desktop app, enter your request or question in the prompt box.
-    - In the Codex CLI, run `codex` followed by your request or question. For example,<br>
-        - <code>codex</code> ``List the current compiler and linker options for the project.`` 
+2. Run `codex` followed by your request or question to enable Codex to assist with RVBuilder project development. Codex primarily supports project configuration tasks and provides guidance for development queries. For example,<br>
+        - <code>codex</code> ``List the current compiler and linker options for the project.`` <br>
         - <code>codex</code> ``Change the compiler from GCC to Clang.``
      
 
-## Claude Code Desktop/CLI 
+## Claude Code 
 ### Requirements
 - Claude Code Desktop (version 1.3883.0 or later) or Claude Code CLI (version 2.1.112 or later)
 - `Node.js` (version 18 or later)
@@ -146,8 +144,6 @@ This section outlines the requirements, installation, configuration, and usage o
 
     ``npm install -g @anthropic-ai/claude-code`` <br>
     
-    To use the Claude Code Desktop app, download and install it from the [**Claude Download**](https://claude.ai/downloads) page.
-
 4. Set up the RVBuilder system prompt for Claude Code.<br>
     - If a global `CLAUDE.md` does not exist, copy `CLAUDE.md` from the extracted RVBuilder MCP package to the user Claude directory. <br>
        ```powershell
@@ -160,21 +156,21 @@ This section outlines the requirements, installation, configuration, and usage o
        Get-Content D:/rvbuilder-mcp/CLAUDE.md | Add-Content $HOME/.claude/CLAUDE.md 
        ```
 
-### RVBuilder Development with Claude Code 
+### RVBuilder Development with Claude Code CLI
 
-1. Open Claude Code Desktop or CLI, specify an RVBuilder project (e.g., D:/my-project).
-    - In the Claude Code Desktop app, select the project folder.
-    - In the Claude Code CLI, change the working directory to the project folder. 
+1. Change the working directory to the desired RVBuilder project (e.g., D:/my-project).
+
+    ```powershell
+    # Powershell
+    cd D:\my-project
+    ```
 
 2. Register the standalone MCP server in the extracted RVBuilder MCP package for the project.<br>
     ```powershell
     # Powershell
     claude mcp add -s local rvbuilder node "D:/rvbuilder-mcp/dist/mcp-server.js"
     ```
-4. Use Claude Code to assist with RVBuilder project development. Claude Code primarily supports project configuration tasks and provides guidance for development queries.
-
-    - In the Claude Code Desktop app, enter your request or question in the prompt box.
-    - In the Claude Code CLI, run `claude` followed by your request or question. For example,<br>
+4. Run `claude` followed by your request or question to enable Claude Code to assist with RVBuilder project development. Claude Code primarily supports project configuration tasks and provides guidance for development queries. For example,<br>
         - <code>claude</code> ``Change the project target to ADP-AE350-A45 and update build settings`` <br>
         - <code>claude</code> ``Enable DSP for my project``<br>
         - <code>claude</code> ``What are the issues that might cause build failures?``
