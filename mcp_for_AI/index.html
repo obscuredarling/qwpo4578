@@ -603,10 +603,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Requirements
       
     </span>
   </a>
@@ -653,10 +653,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisites_1" class="md-nav__link">
+  <a href="#requirements_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Requirements
       
     </span>
   </a>
@@ -703,10 +703,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisites_2" class="md-nav__link">
+  <a href="#requirements_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prerequisites
+        Requirements
       
     </span>
   </a>
@@ -771,7 +771,7 @@
   <h1>Use RVBuilder with AI Agents</h1>
 
 <p>RVBuilder provides Model Context Protocol (MCP) servers that enable AI agents to streamline Andes RISC-V project setup, improve configuration accuracy, automate development workflows, and assist in resolving development issues.</p>
-<p>These MCP servers expose a set of resource primitives that supply domain-specific reference knowledge for AI-assisted RVBuilder workflows. When handling requests or queries related to compiler options, linker scripts, debugger commands, or general RVBuilder project configuration, these resources provide the necessary context to generate accurate and relevant responses.</p>
+<p>These MCP servers expose a set of resource primitives, as shown below, that supply domain-specific reference knowledge for AI-assisted RVBuilder workflows. When handling requests or queries related to compiler options, linker scripts, debugger commands, or general RVBuilder project configuration, these resources provide the necessary context to generate accurate and relevant responses.</p>
 <table>
 <thead>
 <tr>
@@ -847,9 +847,10 @@
 </table>
 <p>This section outlines the requirements, installation, configuration, and usage of GitHub Copilot, Codex Desktop/CLI, and Claude Code Desktop/CLI for RVBuilder project development. Note that while RVBuilder workflows support both Linux and Windows environments, the  instructions below use Windows and PowerShell as examples.</p>
 <h2 id="github-copilot-chat">GitHub Copilot Chat</h2>
-<h3 id="prerequisites">Prerequisites</h3>
+<h3 id="requirements">Requirements</h3>
 <ul>
-<li>Visual Studio Code (version 1.99 or later) with the RVBuilder extension installed. For installation instructions of the RVBuilder extension, see <a href="../installation/"><strong>Install RVBuilder</strong></a>.</li>
+<li>Visual Studio Code (version 1.116 or later) with the RVBuilder extension installed. For installation instructions of the RVBuilder extension, see <a href="../installation/"><strong>Install RVBuilder</strong></a>.</li>
+<li>GitHub Copilot Chat extension (version 0.41 or later)</li>
 <li>A GitHub account with an active Copilot subscription or a Copilot Free plan. </li>
 </ul>
 <h3 id="installation-and-setup">Installation and Setup</h3>
@@ -885,9 +886,9 @@
 </li>
 </ol>
 <h2 id="codex-desktopcli">Codex Desktop/CLI</h2>
-<h3 id="prerequisites_1">Prerequisites</h3>
+<h3 id="requirements_1">Requirements</h3>
 <ul>
-<li>Codex Desktop or CLI</li>
+<li>Codex Desktop (version 26.421.11020 or later) or Codex CLI (version 0.122.0 or later)</li>
 <li><code>Node.js</code> (version 18 or later)</li>
 <li>Existing RVBuilder project(s) </li>
 </ul>
@@ -901,7 +902,7 @@
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> │      └── mcp-server.js # Standalone RVBuilder MCP server 
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> ├── AGENTS.md            # System prompt for Codex 
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> └── resource/
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        └── mcp/          # Contains prompt and resource skills 
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        └── mcp/          # Folder of prompt and resource skills 
 </span></code></pre></div></p>
 </li>
 <li>
@@ -918,10 +919,12 @@
 <ul>
 <li>
 <p>If a global <code>AGENTS.md</code> does not exist in <code>$HOME/.codex/</code>, copy <code>AGENTS.md</code> from the extracted RVBuilder MCP package to the user Codex directory. </p>
-<p><div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Powershell</span>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Powershell</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">Copy-Item</span> <span class="n">D</span><span class="p">:/</span><span class="n">rvbuilder-mcp</span><span class="p">/</span><span class="n">AGENTS</span><span class="p">.</span><span class="nb">md </span><span class="n">-Destination</span> <span class="nv">$HOME</span><span class="p">/.</span><span class="n">codex</span><span class="p">/</span><span class="n">AGENTS</span><span class="p">.</span><span class="nb">md </span>
 </span></code></pre></div>
-    - If a global <code>AGENTS.md</code> already exists in <code>$HOME/.codex/</code>, append the RVBuilder system prompt to the existing file. </p>
+</li>
+<li>
+<p>If a global <code>AGENTS.md</code> already exists in <code>$HOME/.codex/</code>, append the RVBuilder system prompt to the existing file. </p>
 <div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c"># Powershell</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">Get-Content</span> <span class="n">D</span><span class="p">:/</span><span class="n">rvbuilder-mcp</span><span class="p">/</span><span class="n">AGENTS</span><span class="p">.</span><span class="nb">md </span><span class="p">|</span> <span class="nb">Add-Content</span> <span class="nv">$HOME</span><span class="p">/.</span><span class="n">codex</span><span class="p">/</span><span class="n">AGENTS</span><span class="p">.</span><span class="nb">md </span>
 </span></code></pre></div>
@@ -960,9 +963,9 @@
 </li>
 </ol>
 <h2 id="claude-code-desktopcli">Claude Code Desktop/CLI</h2>
-<h3 id="prerequisites_2">Prerequisites</h3>
+<h3 id="requirements_2">Requirements</h3>
 <ul>
-<li>Claude Code Desktop or CLI</li>
+<li>Claude Code Desktop (version 1.3883.0 or later) or Claude Code CLI (version 2.1.112 or later)</li>
 <li><code>Node.js</code> (version 18 or later)</li>
 <li>Existing RVBuilder project(s)</li>
 </ul>
@@ -975,7 +978,7 @@
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a> │      └── mcp-server.js # Standalone RVBuilder MCP server 
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a> ├── CLAUDE.md            # System prompt for Claude Code 
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a> └── resource/
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        └── mcp/          # Contains prompt and resource skills 
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        └── mcp/          # Folder of prompt and resource skills 
 </span></code></pre></div></p>
 </li>
 <li>
