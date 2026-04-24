@@ -21,7 +21,7 @@ The level of control available to AI agents depends on how the MCP servers are i
 | Codex Desktop/CLI | Standalone (STDIO via MCP server) |  Assistance with project configuration and development queries | No |
 | Claude Code Desktop/CLI | Standalone (STDIO via MCP server) |  Assistance with project configuration and development queries | No |
 
-This section outlines the requirements, installation, configuration, and usage of GitHub Copilot, Codex Desktop/CLI, and Claude Code Desktop/CLI for RVBuilder project development. Note that while RVBuilder workflows support both Linux and Windows environments, the instructions for Codex/Claude Code-assisted worflows below primarily use a Windows environment with PowerShell and AI CLI as examples.
+This section outlines the requirements, installation, configuration, and usage of GitHub Copilot, Codex Desktop/CLI, and Claude Code Desktop/CLI for RVBuilder project development. Note that while RVBuilder workflows support both Linux and Windows environments, the instructions for Codex/Claude Code-assisted workflows below primarily use a Windows environment with PowerShell and AI CLI as examples.
 
 ## GitHub Copilot Chat 
 
