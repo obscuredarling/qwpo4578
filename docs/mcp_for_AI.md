@@ -1,6 +1,6 @@
 RVBuilder provides Model Context Protocol (MCP) servers that enable AI agents to streamline Andes RISC-V project setup, improve configuration accuracy, automate development workflows, and assist in resolving development issues.
 
-These MCP servers expose a set of resource primitives that supply domain-specific reference knowledge for AI-assisted RVBuilder workflows. When handling requests or queries related to compiler options, linker scripts, debugger commands, or general RVBuilder project configuration, these resources provide the necessary context to generate accurate and relevant responses.
+These MCP servers expose a set of resource primitives, as shown below, that supply domain-specific reference knowledge for AI-assisted RVBuilder workflows. When handling requests or queries related to compiler options, linker scripts, debugger commands, or general RVBuilder project configuration, these resources provide the necessary context to generate accurate and relevant responses.
 
 | Resource | Domain Knowledge / Reference |
 |----------|------------------------------|
@@ -25,8 +25,9 @@ This section outlines the requirements, installation, configuration, and usage o
 
 ## GitHub Copilot Chat 
 
-### Prerequisites
-- Visual Studio Code (version 1.99 or later) with the RVBuilder extension installed. For installation instructions of the RVBuilder extension, see [**Install RVBuilder**](./installation.md).
+### Requirements
+- Visual Studio Code (version 1.116 or later) with the RVBuilder extension installed. For installation instructions of the RVBuilder extension, see [**Install RVBuilder**](./installation.md).
+- GitHub Copilot Chat extension (version 0.41 or later)
 - A GitHub account with an active Copilot subscription or a Copilot Free plan. 
 
 ### Installation and Setup
@@ -53,8 +54,8 @@ This section outlines the requirements, installation, configuration, and usage o
 
 
 ## Codex Desktop/CLI 
-### Prerequisites
-- Codex Desktop or CLI
+### Requirements
+- Codex Desktop (version 26.421.11020 or later) or Codex CLI (version 0.122.0 or later)
 - `Node.js` (version 18 or later)
 - Existing RVBuilder project(s) 
 
@@ -67,7 +68,7 @@ This section outlines the requirements, installation, configuration, and usage o
      │      └── mcp-server.js # Standalone RVBuilder MCP server 
      ├── AGENTS.md            # System prompt for Codex 
      └── resource/
-            └── mcp/          # Contains prompt and resource skills 
+            └── mcp/          # Folder of prompt and resource skills 
 
     ```
 
@@ -86,6 +87,7 @@ This section outlines the requirements, installation, configuration, and usage o
         # Powershell
         Copy-Item D:/rvbuilder-mcp/AGENTS.md -Destination $HOME/.codex/AGENTS.md 
         ```
+
     - If a global `AGENTS.md` already exists in `$HOME/.codex/`, append the RVBuilder system prompt to the existing file. 
 
         ```powershell
@@ -118,8 +120,8 @@ This section outlines the requirements, installation, configuration, and usage o
      
 
 ## Claude Code Desktop/CLI 
-### Prerequisites
-- Claude Code Desktop or CLI
+### Requirements
+- Claude Code Desktop (version 1.3883.0 or later) or Claude Code CLI (version 2.1.112 or later)
 - `Node.js` (version 18 or later)
 - Existing RVBuilder project(s)
 
@@ -131,7 +133,7 @@ This section outlines the requirements, installation, configuration, and usage o
      │      └── mcp-server.js # Standalone RVBuilder MCP server 
      ├── CLAUDE.md            # System prompt for Claude Code 
      └── resource/
-            └── mcp/          # Contains prompt and resource skills 
+            └── mcp/          # Folder of prompt and resource skills 
 
     ```
 
