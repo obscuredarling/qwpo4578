@@ -1,8 +1,8 @@
 site_name: RVBuilder Documentation
-site_url: https://obscuredarling.github.io/qwpo4578/
+site_url: https://andestech.github.io/RVBuilder/ 
 
 repo_name: RVBuilder Doc Repo  
-repo_url: https://github.com/obscuredarling/qwpo4578 
+repo_url: https://github.com/andestech/RVBuilder 
 edit_uri: edit/main/docs/ 
 
 theme: 
