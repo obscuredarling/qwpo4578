@@ -1,0 +1,4 @@
+doc/coding
+site/
+__pycache__/
+.env

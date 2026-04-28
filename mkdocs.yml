@@ -1,0 +1,66 @@
+site_name: RVBuilder Documentation
+site_url: https://andestech.github.io/RVBuilder/ 
+
+repo_name: RVBuilder Doc Repo  
+repo_url: https://github.com/andestech/RVBuilder 
+edit_uri: edit/main/docs/ 
+
+theme: 
+  name: material
+
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+   # - navigation.expand
+    - navigation.tracking
+    - navigation.top
+    - toc.integrate 
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+
+nav: 
+    - Home: index.md 
+    - Supported Targets: targets.md
+    - Install RVBuilder: installation.md
+    - Use RVBuilder in VS Code: using_rvbuilder.md
+    - Create a Project: project_create.md
+    - Configure a Project: project_config.md
+    - Build an Application: project_build.md
+    - Flash an Application: project_flash.md
+    - Debug an Application: project_debug.md
+    - Tutorials with Demo Applications: demo.md
+    - Use RVBuilder with AI Agents: mcp_for_AI.md 
+
+
