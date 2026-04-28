@@ -88,7 +88,7 @@ The **Call Stack** section shows the hierarchy of active function calls at the c
 
 ### Disassembly
 
-The **Disassembly** view displays the machine instructions for the selected stack frame or current program counter (PC). It shows the instruction address, the function symbol with offset, the opcode/decoded assembly mnemonic, and marks the current PC with a highlighted row. You can view disassembled instructions alongside source code and step through them for detailed program analysis. To open the view, right-click a stack frame in the **Call Stack** section and select "Open Disassembly View". 
+The **Disassembly** view displays the machine instructions for the selected stack frame or current program counter (PC). It shows the instruction address, function symbol with offset, machine code (opcode), and decoded assembly mnemonic in separate columns and highlights the row corresponding to the current PC. You can view disassembled instructions alongside source code and step through them for detailed program analysis. To open the view, right-click a stack frame in the **Call Stack** section and select "Open Disassembly View". 
 
  ![Disassembly](./images/disassembly.png) 
 
